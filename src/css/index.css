@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 
+@import './components/*.css';
 @import './blocks/*.css';
 @import './scopes/*.css';
 

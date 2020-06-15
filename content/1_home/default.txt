@@ -4,11 +4,26 @@ Title: Intro
 
 Content:
 
-A collection of minimalistic components and utilities. Optionally, the Watcher (inspired by [UIkit](https://getuikit.com/)) can be used to glue them all together and allow them to be used just with HTML markup.
+Oblik Toolkit is a collection of minimal and extensible JavaScript components and utilities. It's not focused on reactivity like Vue, React, Angular, etc. It's also not a framework with predesigned components like Bootstrap. What it _does_ focus on is just the interactive behaviors. Things like parallax and scroll effects, sliders, etc.
 
-Core values and goals:
+The toolkit can be compared to [UIKit](https://getuikit.com/), from which it has drawn a lot of inspiration. The main difference is that Oblik focuses solely on the JavaScript parts and depends on CSS as little as possible, leaving styling in your hands.
 
-1. **Options.** Before everything, Oblik's goal is to help you. It doesn't provide complex do-it-all solutions. Instead, it provides simple functionality that could be extended to fit your own use cases.
-1. **Renderless.** Components use as little CSS and DOM mutations as possible. They provide just JavaScript functionality while design and markup are left in your hands, allowing you to achieve a unique look and feel.
-1. **Modularity.** The project uses [ES6 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) so you can import just the things you need. You can use a single utility function or component, but you can also add a bundle containing everything.
-1. **Compatibility.** While modern browsers are the target and modern features are used, everything should be working fine up to IE11. Various parts of the Toolkit could work in even older browsers.
+The main goals of this project are:
+
+1. Giving you components with logic for interactive behaviors
+2. Allowing you to easily extend those components or create your own
+3. Providing a way to easily use the components with just HTML attributes
+
+## Architecture
+
+- Components are expressed as ES6 classes encapsulated as ES6 modules
+- TypeScript is used to provide stability and enhance developer experience
+- Code is compiled down to ES5 to support browsers up to IE11
+
+Oblik is meant to be used as a dependency in your project where you import just the things you need. However, you can also use everything straight from a CDN. (link: #todo text: Usage).
+
+## Examples
+
+The most direct way to use a component is to simply import it and attach it to an element with JavaScript. Here's an example with the (link: #todo text: Carousel) component:
+
+(example: slider)

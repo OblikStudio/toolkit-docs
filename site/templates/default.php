@@ -25,7 +25,7 @@
 		<?= $page->title() ?>
 	</h1>
 
-	<?= $page->content()->content()->kt() ?>
+	<?= $page->content()->content()->markdown()->kirbytags() ?>
 </main>
 
 <?= snippet('document/close') ?>

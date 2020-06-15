@@ -5,7 +5,8 @@ const BrowserSyncWebpackPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
 	entry: {
-		main: './src/js/index.ts'
+		main: './src/js/index.ts',
+		slider: './content/examples/slider/script.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'assets')

@@ -5,6 +5,10 @@
 		@apply mt-8 mb-6 text-5xl leading-none font-bold text-gray-800;
 	}
 
+	h2 {
+		@apply mt-8 mb-6 text-3xl leading-none font-bold text-gray-800;
+	}
+
 	p, ul, ol {
 		@apply my-4;
 	}
@@ -19,5 +23,13 @@
 
 	ol {
 		@apply list-decimal;
+	}
+
+	a {
+		@apply text-accent;
+
+		&:hover {
+			@apply underline;
+		}
 	}
 }

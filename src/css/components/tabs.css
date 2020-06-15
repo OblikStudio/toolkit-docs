@@ -1,0 +1,3 @@
+[ob-tabs-item]:not(.is-active) {
+	display: none;
+}
