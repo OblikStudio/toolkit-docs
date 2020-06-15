@@ -1,0 +1,17 @@
+Title: Components
+
+----
+
+Content:
+
+If you need something more, components provide advanced functionality. They are simple classes (constructor functions) with three arguments:
+
+- `element` to which they are attached to
+- `options` that alter the component's behavior
+- `parent` component
+
+To be more organized, components are divided into three groups:
+
+- _functional_ do small things like scrolling to a part of the page, monitoring an element's height so it can be animated with CSS, toggling a class based on some user event...
+- _interface_ provide the usual slider, accordion, masonry grid...
+- _misc_ do random stuff like allowing you to use an HTML element as cursor, splitting text in an element by words so you can animate them...

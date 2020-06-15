@@ -1,3 +1,8 @@
+/assets
 /kirby
+/media
+/node_modules
 /public
+/site/accounts
+/site/sessions
 /vendor

@@ -1,0 +1,14 @@
+Title: Intro
+
+----
+
+Content:
+
+A collection of minimalistic components and utilities. Optionally, the Watcher (inspired by [UIkit](https://getuikit.com/)) can be used to glue them all together and allow them to be used just with HTML markup.
+
+Core values and goals:
+
+1. **Options.** Before everything, Oblik's goal is to help you. It doesn't provide complex do-it-all solutions. Instead, it provides simple functionality that could be extended to fit your own use cases.
+1. **Renderless.** Components use as little CSS and DOM mutations as possible. They provide just JavaScript functionality while design and markup are left in your hands, allowing you to achieve a unique look and feel.
+1. **Modularity.** The project uses [ES6 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) so you can import just the things you need. You can use a single utility function or component, but you can also add a bundle containing everything.
+1. **Compatibility.** While modern browsers are the target and modern features are used, everything should be working fine up to IE11. Various parts of the Toolkit could work in even older browsers.

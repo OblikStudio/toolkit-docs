@@ -1,0 +1,23 @@
+.s-content {
+	@apply text-lg leading-normal;
+
+	h1 {
+		@apply mt-8 mb-6 text-5xl leading-none font-bold text-gray-800;
+	}
+
+	p, ul, ol {
+		@apply my-4;
+	}
+
+	ul, ol {
+		@apply pl-8;
+	}
+
+	ul {
+		@apply list-disc;
+	}
+
+	ol {
+		@apply list-decimal;
+	}
+}
