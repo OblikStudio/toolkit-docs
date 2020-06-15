@@ -1,7 +1,7 @@
 {
     "name": "oblik/docs",
     "scripts": {
-        "build": "php test.php"
+        "build": "php build.php"
     },
     "authors": [
         {
