@@ -1,3 +1,5 @@
+/* purgecss start ignore */
+
 @import 'tailwindcss/base';
 
 @import './prism.css';
@@ -8,6 +10,8 @@
 @import './components/*.css';
 @import './blocks/*.css';
 @import './scopes/*.css';
+
+/* purgecss end ignore */
 
 @import 'tailwindcss/utilities';
 @import 'tailwindcss/screens';
