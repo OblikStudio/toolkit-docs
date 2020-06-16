@@ -5,7 +5,7 @@ use Kirby\Toolkit\Dir;
 
 require 'kirby/bootstrap.php';
 
-$pages = kirby()->site()->pages();
+$pages = kirby()->site()->index();
 $path = __DIR__ . '/public';
 
 if (!is_dir($path)) {
