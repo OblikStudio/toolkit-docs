@@ -8,6 +8,13 @@ pre[class*="language-"] {
 	@apply px-8 py-6 text-sm rounded-md;
 }
 
+:not(pre) > code {
+	padding: 0.2em 0.4em;
+    font-size: 14px;
+    background-color: #edf2f7;
+    border-radius: 4px;
+}
+
 iframe {
 	min-height: 250px;
 }

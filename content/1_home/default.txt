@@ -27,3 +27,7 @@ Oblik is meant to be used as a dependency in your project where you import just 
 The most direct way to use a component is to simply import it and attach it to an element with JavaScript. Here's an example with the (link: #todo text: Carousel) component:
 
 (example: slider active: 3)
+
+However, having to manually query the needed DOM elements and intialize your components can become annoying and tough to deal with. That's where the (link: #todo text: Watcher) helps. It binds a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver) to an element (like the `<body>`) then automatically creates and destroys components you've registered:
+
+(example: slider-watcher active: 3)
