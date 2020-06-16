@@ -31,3 +31,7 @@ The most direct way to use a component is to simply import it and attach it to a
 However, having to manually query the needed DOM elements and intialize your components can become annoying and tough to deal with. That's where the (link: #todo text: Watcher) helps. It binds a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver) to an element (like the `<body>`) then automatically creates and destroys components you've registered:
 
 (example: slider-watcher active: 3)
+
+If you look at the HTML, you'll see that you can initialize components and assign options to them via attributes. You can create your own components and use them in a similar fashion:
+
+(example: custom-component active: 2)

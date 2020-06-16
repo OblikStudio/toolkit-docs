@@ -7,7 +7,8 @@ module.exports = {
 	entry: {
 		main: './src/js/index.ts',
 		slider: './content/examples/slider/script.js',
-		'slider-watcher': './content/examples/slider-watcher/script.js'
+		'slider-watcher': './content/examples/slider-watcher/script.js',
+		'custom-component': './content/examples/custom-component/script.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'assets')
