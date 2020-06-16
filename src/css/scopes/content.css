@@ -3,11 +3,11 @@
 	max-width: 40rem;
 
 	h1 {
-		@apply mt-8 mb-6 text-5xl leading-none font-bold text-gray-800;
+		@apply mt-8 mb-6 text-4xl leading-none font-bold text-gray-800;
 	}
 
 	h2 {
-		@apply mt-8 mb-6 text-3xl leading-none font-bold text-gray-800;
+		@apply mt-8 mb-6 text-2xl leading-none font-bold text-gray-800;
 	}
 
 	p, ul, ol {
@@ -36,5 +36,9 @@
 		&:hover {
 			@apply underline;
 		}
+	}
+
+	& > pre {
+		@apply my-8;
 	}
 }

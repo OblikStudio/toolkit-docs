@@ -8,7 +8,8 @@ module.exports = {
 		main: './src/js/index.ts',
 		slider: './content/examples/slider/script.js',
 		'slider-watcher': './content/examples/slider-watcher/script.js',
-		'custom-component': './content/examples/custom-component/script.js'
+		'custom-component': './content/examples/custom-component/script.js',
+		'custom-subcomponent': './content/examples/custom-subcomponent/script.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'assets')
@@ -37,7 +38,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.ts$/,
+				test: /\.(t|j)s$/,
 				exclude: /node_modules/,
 				loader: 'ts-loader',
 				options: {
