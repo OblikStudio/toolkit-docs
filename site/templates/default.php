@@ -21,7 +21,9 @@
 		<?= $page->title() ?>
 	</h1>
 
-	<?= $page->content()->content()->markdown()->clean()->kirbytags() ?>
+	<?php if ($page->content()->content()->isNotEmpty()) : ?>
+		<?= $page->content()->content()->markdown()->clean()->kirbytags() ?>
+	<?php endif ?>
 </main>
 
 <?= snippet('document/close') ?>
