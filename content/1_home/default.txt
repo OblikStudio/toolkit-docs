@@ -26,4 +26,4 @@ Oblik is meant to be used as a dependency in your project where you import just 
 
 The most direct way to use a component is to simply import it and attach it to an element with JavaScript. Here's an example with the (link: #todo text: Carousel) component:
 
-(example: slider)
+(example: slider active: 3)

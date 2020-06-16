@@ -1,0 +1,12 @@
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-size: 48px;
+	font-weight: bold;
+	background: #edf2f7;
+	color: #2d3748;
+	border-radius: 4px;
+	user-select: none;
+}

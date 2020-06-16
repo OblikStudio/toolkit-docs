@@ -1,4 +1,7 @@
 import '../css/index.css'
+
+import './keyboard.ts'
+
 import { Watcher } from './oblik/src/index'
 import { Tabs as BaseTabs } from './oblik/src/components/tabs'
 

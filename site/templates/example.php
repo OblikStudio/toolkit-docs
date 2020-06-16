@@ -10,7 +10,7 @@
 	<?= css('assets/main.css') ?>
 
 	<style>
-		<?php require $page->root() . '/style.css' ?>
+		<?php require $page->root() . '/style.css' ?><?php require $page->root() . '/demo.css' ?>
 	</style>
 </head>
 

@@ -1,0 +1,13 @@
+body:not(.is-kb-focus) {
+	button {
+		outline: none;
+	}
+}
+
+pre[class*="language-"] {
+	@apply px-8 py-6 text-sm rounded-md;
+}
+
+iframe {
+	min-height: 250px;
+}

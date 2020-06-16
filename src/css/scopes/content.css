@@ -1,5 +1,6 @@
 .s-content {
 	@apply text-lg leading-normal;
+	max-width: 40rem;
 
 	h1 {
 		@apply mt-8 mb-6 text-5xl leading-none font-bold text-gray-800;

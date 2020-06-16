@@ -1,0 +1,20 @@
+.b-btn {
+	@apply inline-flex text-base text-gray-600 font-bold transition duration-200;
+
+	&:after {
+		@apply text-accent opacity-0;
+		content: '.';
+	}
+
+	&:hover {
+		@apply text-black;
+	}
+
+	&.is-active {
+		@apply text-black;
+
+		&:after {
+			@apply opacity-100;
+		}
+	}
+}

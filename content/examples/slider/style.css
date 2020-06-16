@@ -10,13 +10,6 @@
 
 .item {
 	flex-shrink: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: calc(50% - 20px);
-	height: 100vh;
-	margin-right: 40px;
-	font-size: 64px;
-	background: #222;
-	color: #fff;
+	width: calc(50% - 10px);
+	margin-right: 20px;
 }
