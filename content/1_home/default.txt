@@ -1,26 +1,26 @@
-Title: Intro
+Title: Introduction
 
 ----
 
 Content:
 
-Oblik Toolkit is a collection of minimal and extensible JavaScript components and utilities. It's not focused on reactivity like Vue, React, Angular, etc. It's also not a framework with predesigned components like Bootstrap. What it _does_ focus on is just the interactive behaviors. Things like parallax and scroll effects, sliders, etc.
+Oblik Toolkit is a collection of minimal and extensible JavaScript components and utilities. It's not focused on reactivity like Vue or React. It's also not a framework with predesigned components like Bootstrap. What it _does_ focus on is just interactive behaviors. Things like parallax and scroll effects, sliders, etc.
 
 The toolkit can be compared to [UIKit](https://getuikit.com/), from which it has drawn a lot of inspiration. The main difference is that Oblik focuses solely on the JavaScript parts and depends on CSS as little as possible, leaving styling in your hands.
 
-The main goals of this project are:
+Main goals of the project are:
 
 1. Giving you components with logic for interactive behaviors
 2. Allowing you to easily extend those components or create your own
-3. Providing a way to easily use the components with just HTML attributes
+3. Providing a way to easily use components with just HTML attributes
 
 ## Architecture
 
-- Components are expressed as ES6 classes encapsulated in ES6 modules
+- Components are expressed as ES6 classes in ES6 modules
 - TypeScript is used to provide stability and enhance developer experience
 - Code is compiled down to ES5 to support browsers up to IE11
 
-Oblik is meant to be used as a dependency in your project where you import just the things you need. However, you can also use everything straight from a CDN. (link: #todo text: Usage).
+Oblik is meant to be used as a dependency in your project where you import just the things you need. However, you could also use it straight from a CDN.
 
 ## Examples
 
@@ -28,7 +28,7 @@ The most direct way to use a component is to simply import it and attach it to a
 
 (example: slider active: 3)
 
-However, having to manually query the needed DOM elements and intialize your components can become annoying and tough to deal with. That's where the (link: #todo text: Watcher) helps. It binds a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver) to an element (like the `<body>`) then automatically creates and destroys components you've registered:
+However, having to manually query the needed DOM elements and intialize your components can become annoying and tough to deal with. That's where the (link: #todo text: Watcher) helps. It binds a [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to an element (like the `<body>`) then automatically creates and destroys components you've registered:
 
 (example: slider-watcher active: 3)
 
