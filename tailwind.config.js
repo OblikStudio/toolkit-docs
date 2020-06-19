@@ -97,7 +97,9 @@ module.exports = {
 			outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
 			none: 'none',
 		},
-		container: {},
+		container: {
+			center: true,
+		},
 		cursor: {
 			auto: 'auto',
 			default: 'default',
@@ -229,6 +231,7 @@ module.exports = {
 			'5xl': '64rem',
 			'6xl': '72rem',
 			full: '100%',
+			content: '40rem',
 			...breakpoints(theme('screens')),
 		}),
 		minHeight: {
