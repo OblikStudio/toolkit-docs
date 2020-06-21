@@ -26,13 +26,21 @@
 	<hr class="my-12 border-t-2 border-gray-200">
 
 	<div class="flex -my-4 text-xl">
-		<?php if ($prev = $page->prevListed()) : ?>
+		<?php
+		$all = $site->index()->listed();
+		$index = $all->indexOf($page);
+
+		$prev = $all->nth($index - 1);
+		$next = $all->nth($index + 1);
+		?>
+
+		<?php if ($prev) : ?>
 			<a class="b-anchor py-4 text-accent font-bold" href="<?= $prev->url() ?>">
 				&larr; <?= $prev->title() ?>
 			</a>
 		<?php endif ?>
 
-		<?php if ($next = $page->nextListed()) : ?>
+		<?php if ($next) : ?>
 			<a class="b-anchor ml-auto py-4 text-accent font-bold" href="<?= $next->url() ?>">
 				<?= $next->title() ?> &rarr;
 			</a>
