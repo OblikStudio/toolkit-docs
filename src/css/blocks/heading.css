@@ -1,0 +1,24 @@
+.b-heading {
+	@apply relative;
+
+	&:after {
+		/* Fixes text baseline alignment in <code>-only headings. */
+		content: '\00a0';
+		user-select: none;
+	}
+
+	&__fragment {
+		@apply absolute block -my-2 p-2 opacity-0;
+		right: 100%;
+
+		&:focus {
+			@apply opacity-100;
+		}
+	}
+
+	&:hover {
+		^&__fragment {
+			@apply opacity-100;
+		}
+	}
+}

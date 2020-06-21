@@ -21,7 +21,7 @@
 			<div class="pl-4 border-l border-gray-400">
 
 				<?php if ($headings) : ?>
-					<ul class="b-headings">
+					<ul class="b-nav-headings">
 						<?= snippet('nav-headings', ['items' => $headings]) ?>
 					</ul>
 				<?php endif ?>
