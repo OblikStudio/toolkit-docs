@@ -1,7 +1,7 @@
 .b-anchor {
-	@apply transition-opacity duration-200;
+	@apply transition-opacity duration-200 select-none;
 
 	&:hover {
-		@apply opacity-75;
+		@apply opacity-50;
 	}
 }

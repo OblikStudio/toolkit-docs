@@ -1,0 +1,11 @@
+.b-headings {
+	ul {
+		li {
+			@apply pl-4;
+		}
+	}
+
+	a {
+		@apply b-anchor;
+	}
+}
