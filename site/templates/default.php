@@ -17,7 +17,9 @@
 		</h1>
 
 		<?php if ($page->content()->content()->isNotEmpty()) : ?>
-			<?= $page->content()->content()->markdown()->clean()->kirbytags() ?>
+			<?= $page->content()->content()->markdown()->clean()->kirbytags()->headings(function ($heading) {
+				return snippet('heading', ['item' => $heading], true);
+			}) ?>
 		<?php endif ?>
 	</div>
 

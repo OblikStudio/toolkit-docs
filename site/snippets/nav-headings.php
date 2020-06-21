@@ -1,19 +1,12 @@
-<?php
-
-use Kirby\Toolkit\Str;
-
-?>
-
 <?php foreach ($items as $item) : ?>
 	<li>
 
 		<?php
 		$children = $item->children();
-		$text = Str::unhtml($item->text()->value());
 		?>
 
-		<a class="flex py-2" href="#todo">
-			<?= $text ?>
+		<a class="flex py-2" href="#<?= $item->id() ?>">
+			<?= $item->text() ?>
 		</a>
 
 		<?php if (count($children) > 0) : ?>
