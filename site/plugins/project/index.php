@@ -13,7 +13,7 @@ App::plugin('oblik/docs', [
 			],
 			'html' => function ($tag) {
 				$page = page('examples/' . $tag->value);
-				$active = $tag->active ?? null;
+				$active = $tag->active ?? 1;
 
 				if ($page) {
 					return snippet('example', compact('page', 'active'), true);
