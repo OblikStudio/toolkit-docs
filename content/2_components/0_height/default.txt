@@ -1,0 +1,43 @@
+Title: Height
+
+----
+
+Content:
+
+Uses a (link: #todo text: Poller) to continuously retrieve the height of an element and apply it either as an inline style or CSS variable. This is useful when you want to animate the height of an element with dynamic content using CSS transitions.
+
+(example: height active: 4)
+
+The reason this component is needed is because you can't transition between height `auto` and some other value. [Read more on CSS-Tricks](https://css-tricks.com/using-css-transitions-auto-dimensions/). Most of the time, we want to animate between `height: 0px` and the natural height of the element. However, the natural height is `auto` and we can't animate it. That's where this component helps - it applies an explicit value in `px` that equals the height of our content so we can animate it.
+
+By default, this component monitors the height of its first child and applies it to itself. For example:
+
+```html
+<div ob-height>
+	<div class="wrapper">
+		<!-- content -->
+	</div>
+</div>
+```
+
+The `.wrapper` element is only used to group whatever elements your content consists of. Its `offsetHeight` should equal the height of your content. Then, that value is applied to the `ob-height` element. That's the element whose height you actually animate.
+
+## Options
+
+### `var`
+
+If specified, the height will no longer be applied as an inline style, but will instead be set to a CSS variable whose name is `var`.
+
+**Default:** `undefined`
+
+### `varTarget`
+
+When height is applied as a CSS variable, this option determines what element receives it.
+
+**Default:** `$element`
+
+### `target`
+
+The element whose height is monitored.
+
+**Default:** `$element.firstElementChild`
