@@ -1,0 +1,53 @@
+Title: Carousel
+
+----
+
+Content:
+
+- Has touch support
+- Sliding can be animated with CSS transitions
+- Active slide is changed based on swipe speed, rather than distance
+- Pure CSS option for infinite sliding (via CSS flex order)
+- Gap between items is controlled with CSS
+- Items per row is controlled with CSS and works responsively
+
+(example: slider-watcher active: 4)
+
+## Components
+
+- `rail` contains all slides and it should have CSS applied to it that orders the slides on a single row
+	- `item` (multiple) are the slides and can have horizontal CSS `margin` applied to make gaps between them
+- `next` moves to the next slide on click
+- `prev` moves to the previous slide on click
+
+## Options
+
+All the following options are applied to the `rail` component.
+
+### `infinite`
+
+Whether the carousel can be scrolled indefinitely.
+
+**Default:** `false`
+
+### `itemsPerScreen`
+
+Although you can control items per screen via CSS, you can explicitly specify it.
+
+### `overdrag`
+
+Ratio for how far the user can drag beyond the first/last item. If the carousel width is `400px` and `overdrag` is `0.5`, then the distance will be `200px`.
+
+**Default:** `0.3`
+
+### `screenChangeSpeed`
+
+The minimum swipe speed (in pixels per second) that is needed to change the active slide.
+
+**Default:** `500`
+
+### `clickThreshold`
+
+If the user dragged less pixels than this value, the drag will be considered a click. This is needed for when the slide is also and `<a>` tag.
+
+**Default:** `40`
