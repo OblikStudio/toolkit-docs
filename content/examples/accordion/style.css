@@ -1,0 +1,3 @@
+[ob-accordion-item]:not(.is-active) .content {
+	display: none;
+}

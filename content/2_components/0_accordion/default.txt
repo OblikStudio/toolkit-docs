@@ -1,0 +1,23 @@
+Title: Accordion
+
+----
+
+Content:
+
+Toggles a class on elements via a button within them:
+
+(example: accordion active: 4)
+
+## Options
+
+### `active`
+
+Position in DOM of the initial item that should be activated.
+
+**Default:** `null`
+
+### `class`
+
+The name of the class that should be toggled on items.
+
+**Default:** `is-active`

@@ -10,6 +10,12 @@ if (is_numeric($active)) {
 	$data = '';
 }
 
+if ($page->height()->isNotEmpty()) {
+	$style = 'style="height: ' . $page->height() . '"';
+} else {
+	$style = '';
+}
+
 ?>
 
 <div class="my-8" ob-tabs="<?= $data ?>">
@@ -42,6 +48,6 @@ if (is_numeric($active)) {
 			<pre ob-tabs-item><code class="language-js"><?= $js ?></code></pre>
 		<?php endif ?>
 
-		<iframe class="w-full" data-src="<?= $page->url() ?>" ob-tabs-item></iframe>
+		<iframe class="w-full" data-src="<?= $page->url() ?>" ob-tabs-item <?= $style ?>></iframe>
 	</div>
 </div>

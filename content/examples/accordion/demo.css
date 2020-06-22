@@ -1,0 +1,28 @@
+body {
+	padding: 0 20px;
+	background: #edf2f7;
+}
+
+li {
+	margin: 20px 0;
+	padding: 16px;
+	background: #e2e8f0;
+	border-radius: 5px;
+}
+
+div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	background: #cbd5e0;
+	border-radius: 4px;
+}
+
+.content {
+	margin-top: 16px;
+	color: #718096;
+}
