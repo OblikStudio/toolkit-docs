@@ -1,13 +1,3 @@
-<?php
-
-use Kirby\Toolkit\Tpl;
-
-$html = Tpl::load($page->root() . '/index.html');
-$css = Tpl::load($page->root() . '/style.css');
-$cssDemo = Tpl::load($page->root() . '/demo.css');
-
-?>
-
 <html lang="en">
 
 <head>
@@ -20,13 +10,13 @@ $cssDemo = Tpl::load($page->root() . '/demo.css');
 	<?= css('assets/main.css') ?>
 
 	<style>
-		<?= $css ?><?= $cssDemo ?>
+		<?= $page->getStyles() ?>
 	</style>
 </head>
 
 <body class="overflow-x-hidden">
-	<?= $html ?>
-	<?= js('assets/' . $page->slug() . '.js') ?>
+	<?= $page->getMarkup() ?>
+	<?= js($page->getScriptURL()) ?>
 </body>
 
 </html>

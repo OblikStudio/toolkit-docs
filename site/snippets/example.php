@@ -1,10 +1,8 @@
 <?php
 
-use Kirby\Toolkit\Tpl;
-
-$html = Tpl::load($page->root() . '/index.html');
-$css = Tpl::load($page->root() . '/style.css');
-$js = Tpl::load($page->root() . '/script.js');
+$html = $page->getMarkup();
+$css = $page->getStylesText();
+$js = $page->getScriptText();
 
 if (is_numeric($active)) {
 	$data = "active: $active";
