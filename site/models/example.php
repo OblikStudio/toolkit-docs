@@ -39,10 +39,6 @@ class ExamplePage extends Page
 
 	public function getScriptText()
 	{
-		if ($this->scriptText()->isNotEmpty()) {
-			return $this->scriptText()->value();
-		} else {
-			return Tpl::load($this->root() . '/script.js');
-		}
+		return Tpl::load($this->root() . '/script.js');
 	}
 }
