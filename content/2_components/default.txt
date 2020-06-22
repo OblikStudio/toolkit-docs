@@ -4,8 +4,146 @@ Title: Components
 
 Content:
 
-Reusable JavaScript logic is encapsulated in components via ES6 classes. In its constructor function, each component accepts the following arguments:
+Reusable JavaScript logic is encapsulated in components via [ES6 classes](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes). You can create your own Oblik components by simply extending the base component:
+
+```js
+import { Component } from 'oblik'
+
+class MyComponent extends Component {
+	// component logic...
+}
+```
+
+## Lifecycle
+
+There are three hooks in a component's lifecycle:
+
+1. **create** - when the component's constructor function is run
+2. **init** - when all child components have been created and initialized
+3. **destroy** - when the component is no longer needed on the page
+
+In your components, you use hooks like this:
+
+```js
+class MyComponent extends Component {
+	create () {
+		console.log('created')
+	}
+
+	init () {
+		console.log('initialized')
+	}
+
+	destroy () {
+		console.log('destroyed')
+	}
+}
+```
+
+And when you create an instance of your component:
+
+```js
+let instance = new MyComponent() // 'created'
+instance.$init()                 // 'initialized'
+
+// later...
+
+instance.$destroy()              // 'destroyed'
+```
+
+When using the Watcher, the code above is obsolete since components are managed automatically. (link: #todo text: Read more.)
+
+## Properties
+
+In its constructor function, each component accepts the following arguments:
 
 - `element` to which the component is attached to
 - `options` that alter the component's behavior
-- `parent` component, if any
+- `parent` component, if any 
+
+```js
+class MyComponent extends Component { ... }
+class MyChildComponent extends Component { ... }
+
+let parentInstance = new MyComponent(document.body)
+let childInstance = new MyChildComponent(
+	document.querySelector('.foo'), // element
+	{ number: 42, text: 'test' },   // options
+	parentInstance                  // parent
+)
+```
+
+### `$element`
+
+Holds a reference to the DOM element that is bound to the component:
+
+```js
+class MyComponent extends Component {
+	create () {
+		console.log(this.$element) // HTMLElement
+	}
+}
+
+let el = document.querySelector('.my-element')
+let instance = new MyComponent(el)
+instance.$element // el
+```
+
+### `$options`
+
+Configuration object that is passed to the component.
+
+### `$parent`
+
+Reference to the parent component, if there is one.
+
+**Note:** This is a reference to the parent _component_, not the DOM element. To get the element, use `$parent.$element`.
+
+## Static Properties
+
+Properties like `$element` are present on component _instances_ (objects created with the `new` keyword). Static properties are part of the component definition itself (the `class` declaration). [Read about classes on MDN.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+### `components`
+
+Defines subcomponents for a given component:
+
+```js
+class MySubcomponent { }
+
+class MyComponent extends Component {
+	static components = {
+		foo: MySubcomponent
+	}
+}
+```
+
+### `defaults`
+
+An object with default options for component instances:
+
+```js
+class MyComponent extends Component {
+	static defaults = {
+		foo: 'bar',
+		num: 42
+	}
+}
+```
+
+Any options you pass to a component will be merged with the defaults. For example, this instance:
+
+```js
+let instance = new MyComponent(element, {
+	test: 'hello'
+})
+```
+
+...will have the following `$options`:
+
+```js
+{
+	foo: 'bar',
+	num: 42,
+	test: 'hello'
+}
+```
