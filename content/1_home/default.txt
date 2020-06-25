@@ -53,3 +53,21 @@ Subcomponent elements don't have to be direct children of their parent component
 	</div>
 </div>
 ```
+
+## Philosophy
+
+The long-term goal of Oblik is to provide functionality that has a lot of options _through code_. Instead of having a single do-it-all solution that:
+
+- has a ton of complicated code
+- tries to handle every edge case 
+- uses a large configuration object
+
+...the target of Oblik is to provide [object-oriented](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS) components that:
+
+- are straightforward
+- handle the majority of use cases
+- can be configured through [inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+
+In general, the idea is that instead of having one very large and complicated module, you have a base class with the base functionality. The source code is simple to understand and well documented. From there, you can get the _exact_ behavior you want by extending a method here and there.
+
+We believe that's better than having a giant mess of options and features you're probably never going to use.
