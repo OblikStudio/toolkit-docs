@@ -8,10 +8,12 @@ module.exports = {
 		main: './src/js/index.ts',
 		examples: './src/js/examples.ts',
 		polyfills: './src/js/polyfills.ts',
-		slider: './content/examples/slider/script.js',
-		'slider-watcher': './content/examples/slider-watcher/script.js',
+
 		'custom-component': './content/examples/custom-component/script.js',
-		'custom-subcomponent': './content/examples/custom-subcomponent/script.js'
+		'custom-subcomponent': './content/examples/custom-subcomponent/script.js',
+		'loader-animated': './content/examples/loader-animated/script.js',
+		'slider': './content/examples/slider/script.js',
+		'slider-watcher': './content/examples/slider-watcher/script.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'assets')
