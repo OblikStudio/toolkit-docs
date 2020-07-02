@@ -16,6 +16,7 @@
 
 <body class="overflow-x-hidden">
 	<?= $page->getMarkup() ?>
+	<?= js('assets/polyfills.js') ?>
 	<?= js($page->getScriptURL()) ?>
 </body>
 
