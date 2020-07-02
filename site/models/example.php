@@ -12,15 +12,30 @@ class ExamplePage extends Page
 
 	public function getStyles()
 	{
-		$css = Tpl::load($this->root() . '/style.css');
-		$cssDemo = Tpl::load($this->root() . '/demo.css');
-		return $css . PHP_EOL . $cssDemo;
+		$css = '';
+		$parent = $this->parent();
+
+		if (is_a($parent, ExamplePage::class)) {
+			$css .= $parent->getStyles();
+		}
+
+		$css .= Tpl::load($this->root() . '/style.css');
+		$css .= Tpl::load($this->root() . '/demo.css');
+
+		return $css;
 	}
 
 	public function getScriptURL()
 	{
 		$assets = kirby()->root('assets');
-		$slug = $this->slug();
+		$parent = $this->parent();
+
+		if (is_a($parent, ExamplePage::class)) {
+			$slug = $parent->slug();
+		} else {
+			$slug = $this->slug();
+		}
+
 		$filepath = "$assets/$slug.js";
 
 		if (file_exists($filepath)) {
