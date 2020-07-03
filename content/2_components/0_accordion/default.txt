@@ -6,7 +6,7 @@ Content:
 
 Toggles a class on elements via a button within them:
 
-(example: accordion active: 4)
+(example: accordion active: result)
 
 ## Options
 

@@ -11,11 +11,11 @@ Allows pages to be navigated without a refresh, similar to how [single-page appl
 - Scrolls the page smoothly
 - Correctly applies scroll on backwards navigations
 
-(example: loader active: 3)
+(example: loader active: result)
 
 If you want to have page transitions, all you have to do is extend the Container subcomponent. It has `animateIn()` and `animateOut()` methods which should return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the animation has finished. By default, they return an already resolved Promise (no animation). But here, we'll add a class that applies a CSS animation and use the `promiseAnimation()` method to return a Promise that resolves when the [`animationend` event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationend_event) is fired:
 
-(example: loader-animated active: 3)
+(example: loader-animated active: js)
 
 A useful side effect is that thanks to the (link: #todo text: Watcher), all Oblik components are automatically initialized and destroyed when added/removed from the page. This greatly reduces complexity and the chance for memory leaks.
 

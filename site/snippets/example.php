@@ -4,7 +4,7 @@ $html = $page->getMarkup();
 $css = $page->getStylesText();
 $js = $page->getScriptText();
 
-if (is_numeric($active)) {
+if (!empty($active)) {
 	$data = "active: $active";
 } else {
 	$data = '';
@@ -37,17 +37,17 @@ if ($page->height()->isNotEmpty()) {
 
 	<div class="mt-4 rounded-md overflow-hidden">
 		<?php if ($html) : ?>
-			<pre ob-tabs-item><code class="language-html"><?= htmlspecialchars($html) ?></code></pre>
+			<pre ob-tabs-item="id: html"><code class="language-html"><?= htmlspecialchars($html) ?></code></pre>
 		<?php endif ?>
 
 		<?php if ($css) : ?>
-			<pre ob-tabs-item><code class="language-css"><?= $css ?></code></pre>
+			<pre ob-tabs-item="id: css"><code class="language-css"><?= $css ?></code></pre>
 		<?php endif ?>
 
 		<?php if ($js) : ?>
-			<pre ob-tabs-item><code class="language-js"><?= $js ?></code></pre>
+			<pre ob-tabs-item="id: js"><code class="language-js"><?= $js ?></code></pre>
 		<?php endif ?>
 
-		<iframe class="w-full" data-src="<?= $page->url() ?>" ob-tabs-item <?= $style ?>></iframe>
+		<iframe class="w-full" data-src="<?= $page->url() ?>" ob-tabs-item="id: result" <?= $style ?>></iframe>
 	</div>
 </div>
