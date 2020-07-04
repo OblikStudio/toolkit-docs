@@ -5,9 +5,9 @@ use Kirby\Toolkit\Tpl;
 
 class ExamplePage extends Page
 {
-	public function getMarkup()
+	public function getMarkup($source = false)
 	{
-		return Tpl::load($this->root() . '/index.html');
+		return Tpl::load($this->root() . '/index.php', compact('source'));
 	}
 
 	public function getStyles()

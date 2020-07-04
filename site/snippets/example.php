@@ -1,6 +1,6 @@
 <?php
 
-$html = $page->getMarkup();
+$html = $page->getMarkup(true);
 $css = $page->getStylesText();
 $js = $page->getScriptText();
 

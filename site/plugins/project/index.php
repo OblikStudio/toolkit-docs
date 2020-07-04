@@ -5,6 +5,18 @@ use Kirby\Cms\Field;
 use Kirby\Toolkit\Obj;
 use Kirby\Toolkit\Str;
 
+function lipsum(int $index, bool $excerpt)
+{
+	$text = file(__DIR__ . '/lipsum.txt');
+	$content = $text[$index - 1];
+
+	if ($excerpt) {
+		return Str::excerpt($content, 40);
+	} else {
+		return $content;
+	}
+}
+
 App::plugin('oblik/docs', [
 	'tags' => [
 		'example' => [
