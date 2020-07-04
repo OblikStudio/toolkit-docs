@@ -1,0 +1,32 @@
+body {
+	padding: 20px;
+	background: #edf2f7;
+}
+
+[ob-parallax] {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 70vh;
+	margin-bottom: 105vh;
+	padding: 20px;
+	background: #e2e8f0;
+	border-radius: 5px;
+	user-select: none;
+}
+
+[ob-parallax]:before {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	content: attr(style);
+}
+
+[ob-parallax] .target {
+	padding: 20px 40px;
+	font-size: 24px;
+	font-weight: bold;
+	background: #cbd5e0;
+	border-radius: 5px;
+}

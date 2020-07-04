@@ -1,0 +1,37 @@
+Title: Parallax
+
+----
+
+Content:
+
+Compares the [bounding client rect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) of an element to that of another element or the `window` and then applies CSS variables to allow styling.
+
+(example: parallax active: result)
+
+**Note:** IE11 does not support CSS variables. Extend the `apply()` method and use the parallax value to set inline styles instead.
+
+## Options
+
+### `var`
+
+Name for the CSS variable.
+
+**Default:** `parallax`
+
+### `axis`
+
+Use horizontal `x` of vertical `y` scroll.
+
+**Default:** `y`
+
+### `clamp`
+
+Whether the value can't go beyond the `[-1, 1]` range.
+
+**Default:** `true`
+
+### `reference`
+
+The element's rectangle position is compared to this object's rectangle. Can be either an `HTMLElement` or `window`. The `scroll` event listener is attached to this.
+
+**Default:** `window`

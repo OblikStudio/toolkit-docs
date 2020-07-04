@@ -1,0 +1,3 @@
+[ob-parallax] .target {
+	transform: translateY(calc(var(--parallax) * 80%));
+}
