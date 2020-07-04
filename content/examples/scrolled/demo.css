@@ -1,0 +1,16 @@
+body {
+	background: #edf2f7;
+}
+
+nav {
+	padding: 20px;
+	background: #e2e8f0;
+}
+
+section {
+	padding: 20px;
+}
+
+p + p {
+	margin-top: 1em;
+}

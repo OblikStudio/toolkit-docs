@@ -1,0 +1,14 @@
+nav {
+	position: sticky;
+	top: 0;
+	transition: all 0.3s ease-out;
+}
+
+nav.is-scrolled {
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav:not(.is-scrolled-up) {
+	transform: translateY(-100%);
+	opacity: 0;
+}

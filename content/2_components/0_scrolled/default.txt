@@ -1,0 +1,41 @@
+Title: Scrolled
+
+----
+
+Content:
+
+Adds a CSS class when the document is scrolled past its beginning and another class when it's scrolled upwards. This is useful for hiding the navbar when the user is scrolling down or adding shadows to the navbar:
+
+(example: scrolled active: result)
+
+## Options
+
+### `classActive`
+
+Class name to add when the document is scrolled upwards, i.e. when the navbar should be active.
+
+**Default:** `is-scrolled-up`
+
+### `classScrolled`
+
+Class name to add when the document is scrolled past its topmost position.
+
+**Default:** `is-scrolled`
+
+### `slack`
+
+After how many pixels scrolled down to remove `classActive`.
+
+**Default:** `200`
+
+### `slackActive`
+
+After how may pixels scrolled up to add `classActive`.
+
+**Default:** `20`
+
+### `slackScrolled`
+
+After how many pixels scrolled down to add `classScrolled`.
+
+**Default:** `10`
