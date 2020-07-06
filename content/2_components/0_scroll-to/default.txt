@@ -1,0 +1,51 @@
+Title: Scroll To
+
+----
+
+Content:
+
+Smoothly scrolls to an element with a specified (link: #todo text: easing). Can also be bound globally so that all hash links are smoothed out.
+
+(example: scroll-to active: result)
+
+## Options
+
+### `duration`
+
+Length of the animation.
+
+**Default:** `1000`
+
+### `easing`
+
+An (link: #todo text: easing) function.
+
+**Default:** `easeOutQuint`
+
+### `target`
+
+Element that should be scrolled into view.
+
+**Default:** `undefined`
+
+### `offset`
+
+If `target` is specified, `offset` will simply be added to the target element's position. Otherwise, it will scroll to `offset` pixels past the document top.
+
+**Default:** `0`
+
+### `interruptible`
+
+Whether the scroll animation can be interrupted by user input, such as mouse scroll or touch.
+
+**Default:** `true`
+
+## Link easing
+
+If you want to have smooth scrolling for all hash links, you have to use the static `clickHandler()` method and add the resulting function as a `click` listener:
+
+```ts
+import { ScrollTo } from 'oblik/components/scroll-to'
+
+document.addEventListener('click', ScrollTo.clickHandler())
+```

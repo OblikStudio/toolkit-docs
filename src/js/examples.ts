@@ -12,3 +12,5 @@ let w = new Watcher(document.body, {
 })
 
 w.init()
+
+document.addEventListener('click', classes.ScrollTo.clickHandler())
