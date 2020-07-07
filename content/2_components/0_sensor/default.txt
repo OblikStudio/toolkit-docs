@@ -1,0 +1,41 @@
+Title: Sensor
+
+----
+
+Content:
+
+Monitors an element and adds a class to it when its bounding box overlaps with the viewport, i.e. when it comes into view. This is useful for scroll animations:
+
+(example: sensor active: result)
+
+## Options 
+
+### `class`
+
+Added when the element overlaps the container.
+
+**Default:** `is-active`
+
+### `offset`
+
+Added to the element's position, allowing you to make it appear earlier or later.
+
+**Default:** `0`
+
+### `container`
+
+What the element's bounding box is compared to. Can be a parent `HTMLElement` or the `window` (viewport).
+
+**Default:** `window`
+
+### `edge`
+
+Element's bounding box edge that is used to perform the calculation. Either `top`, `right`, `bottom`, or `left`.
+
+**Default:** `top`
+
+### `containerEdge`
+
+Container's bounding box edge that is used to perform the calculation. Either `top`, `right`, `bottom`, or `left`.
+
+**Default:** `bottom`
