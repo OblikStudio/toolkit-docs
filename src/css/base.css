@@ -14,7 +14,3 @@ pre[class*="language-"] {
 	padding: 0.2em 0.4em;
     background-color: #edf2f7;
 }
-
-iframe {
-	min-height: 250px;
-}

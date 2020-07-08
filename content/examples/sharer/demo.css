@@ -1,0 +1,12 @@
+body {
+	padding: 20px;
+	background: #edf2f7;
+}
+
+button {
+	color: #0f0ee2;
+}
+
+button:hover {
+	text-decoration: underline;
+}

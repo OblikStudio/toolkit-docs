@@ -1,0 +1,55 @@
+Title: Sharer
+
+----
+
+Content:
+
+Opens a social media sharer window with prefilled URL and text or copies the page URL to the clipboard.
+
+(example: sharer active: result)
+
+## Options
+
+### `type`
+
+Which social media sharer to invoke:
+
+- [`facebook`](https://developers.facebook.com/docs/plugins/share-button)
+- [`twitter`](https://developer.twitter.com/en/docs/twitter-for-websites/web-intents/overview)
+- [`linkedin`](https://stackoverflow.com/a/33746543/3130281)
+- [`reddit`](https://stackoverflow.com/a/24851347/3130281)
+- [`pinterest`](https://stackoverflow.com/a/11212220/3130281)
+
+Can also be set to `copy` to copy the URL to the clipboard instead.
+
+**Default:** `undefined`
+
+### `url`
+
+What URL to share.
+
+**Default:** `window.location.href`
+
+### `text`
+
+What text to share. Only available for `twitter`, `reddit`, and `pinterest`.
+
+**Default:** `document.title`
+
+### `image`
+
+What image to share. Only available for `pinterest`.
+
+**Default:** `undefined`
+
+### `width`
+
+Width of the opened popup window.
+
+**Default:** `600`
+
+### `height`
+
+Height of the opened popup window.
+
+**Default:** `400`
