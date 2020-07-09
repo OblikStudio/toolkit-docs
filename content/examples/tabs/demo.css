@@ -1,0 +1,24 @@
+body {
+	padding: 20px;
+	background: #edf2f7;
+}
+
+ul {
+	display: inline-flex;
+	margin-bottom: 1em;
+}
+
+[ob-tabs-toggle] {
+	margin-right: 1em;
+	padding: 0.5rem 1rem;
+	background: #cbd5e0;
+	border-radius: 4px;
+	cursor: pointer;
+	user-select: none;
+}
+
+[ob-tabs-item] {
+	padding: 16px;
+	background: #e2e8f0;
+	border-radius: 5px;
+}

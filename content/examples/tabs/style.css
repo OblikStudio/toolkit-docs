@@ -1,0 +1,7 @@
+[ob-tabs-toggle].is-active {
+	opacity: 0.6;
+}
+
+[ob-tabs-item]:not(.is-active) {
+	display: none;
+}

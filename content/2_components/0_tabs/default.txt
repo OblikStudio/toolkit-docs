@@ -1,0 +1,23 @@
+Title: Tabs
+
+----
+
+Content:
+
+Toggles a class on elements via a set of buttons.
+
+(example: tabs active: result)
+
+## Options
+
+### `active`
+
+Position in DOM of the initial item that should be activated.
+
+**Default:** `1`
+
+### `class`
+
+Class that should be toggled on elements.
+
+**Default:** `is-active`
