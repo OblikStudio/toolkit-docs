@@ -1,0 +1,3 @@
+nav:not(.is-active) {
+	display: none;
+}

@@ -1,0 +1,41 @@
+Title: Toggle
+
+----
+
+Content:
+
+Simply toggles a class on an element. Useful for showing and hiding mobile navigation menus.
+
+(example: toggle active: result)
+
+## Options
+
+### `target`
+
+To what element the class should be added.
+
+**Required.**
+
+### `on`
+
+Event that adds the class. If `off` is not set, this will _toggle_ the class instead.
+
+**Default:** `click`
+
+### `off`
+
+Event that removes the class.
+
+**Default:** `undefined`
+
+### `active`
+
+Initial toggled state.
+
+**Default:** `false`
+
+### `class`
+
+The added class.
+
+**Default:** `is-active`
