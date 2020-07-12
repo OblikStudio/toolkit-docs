@@ -51,7 +51,7 @@ instance.$init()                 // 'initialized'
 instance.$destroy()              // 'destroyed'
 ```
 
-When using the Watcher, the code above is obsolete since components are managed automatically. (link: #todo text: Read more.)
+When using the Watcher, the code above is obsolete since components are managed automatically. Learn more about the [Watcher](/watcher).
 
 ## Properties
 
@@ -108,7 +108,7 @@ Properties like `$element` are present on component _instances_ (objects created
 Defines subcomponents for a given component:
 
 ```js
-class MySubcomponent { }
+class MySubcomponent extends Component { }
 
 class MyComponent extends Component {
 	static components = {
@@ -147,3 +147,40 @@ let instance = new MyComponent(element, {
 	test: 'hello'
 }
 ```
+
+## Child references
+
+Whenever a child is added, the parent receives a new property that holds a reference to it. The property name is based on the registered name for the child:
+
+```js
+class MyComponent extends Component {
+	static components = {
+		foo: MySubcomponent
+	}
+
+	init () {
+		this.$foo // the child component
+		this.$foo.$element // the child's DOM element
+	}
+}
+```
+
+If you want to have multiple child components of the same type, all you need to do is initialize the child reference property with an empty array:
+
+```js
+class MyComponent extends Component {
+	static components = {
+		foo: MySubcomponent
+	}
+
+	create () {
+		this.$foo = []
+	}
+
+	init () {
+		this.$foo.forEach(...)
+	}
+}
+```
+
+The `$foo` array will be updated accordingly when child components are added/removed.

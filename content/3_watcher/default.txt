@@ -1,0 +1,196 @@
+Title: Watcher
+
+----
+
+Content:
+
+Unless you're using a library like Vue or React, separating JavaScript functionality in components can be hard to do and maintain. You can split your code in multiple modules or classes, but you still have to initialize it with actual DOM elements and clean it up later.
+
+In Oblik, components are simply ES6 classes and the Watcher is a tool that initializes and destroys them automatically as they're added/removed from the DOM. It does that with the help of a [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).
+
+Let's create a very simple component:
+
+```js
+import { Component } from 'oblik'
+
+class Foo extends Component {
+	init () {
+		console.log('initialized')
+	}
+
+	destroy () {
+		console.log('destroyed')
+	}
+}
+```
+
+Without the Watcher, we would need to manage the component manually:
+
+```js
+let el = document.querySelector('.my-element')
+let instance = new Foo(el)
+instance.$init()
+
+// later...
+
+instance.$destroy()
+```
+
+With the Watcher:
+
+```js
+import { Watcher } from 'oblik'
+
+let w = new Watcher(document.body, {
+	components: {
+		foo: Foo
+	}
+})
+
+w.init()
+```
+
+Now, the Watcher monitors the `document.body` and will manage the registered components accordingly. To use our `Foo` component, we need to add an attribute to the desired HTML element:
+
+```html
+<div ob-foo>My Foo component</div>
+```
+
+Whenever an element with the attribute `ob-foo` is added to the DOM, a component will be created. When that element is removed, it will be destroyed.
+
+## Options
+
+Components can receive options:
+
+```js
+let instance = new Foo(el, {
+	text: 'Hello',
+	num: 42
+})
+```
+
+With the Watcher, we specify them in the HTML attribute:
+
+```html
+<div ob-foo="text: Hello, num: 42">My Foo component</div>
+```
+
+This custom syntax comes from the (link: #todo text: Config) utility. But we can use JSON as well:
+
+```html
+<div ob-foo='{"text": "Hello", "num": 42}'>My Foo component</div>
+```
+
+### Querying elements
+
+You might need to specify an option that has an HTML element as a value:
+
+```js
+let instance = new Foo(el, {
+	target: document.querySelector('.some-element')
+})
+```
+
+When using the Watcher, you need to prefix the property name with `$` and write your query as the value:
+
+```html
+<div ob-foo="$target: .some-element">My Foo component</div>
+```
+
+Additionally, you can query elements relative to the component:
+
+```html
+<div ob-foo="$target: @sibling.child">My Foo component</div>
+
+<div>
+	<p>The target</p>
+</div>
+```
+
+The above would select `<p>` as the `target`. This is done with the (link: #todo text: Query) utility.
+
+## Subcomponents
+
+To specify child components of a component, you need to use the static [`components` property](/components#components):
+
+```js
+class Bar extends Component { }
+
+class Foo extends Component {
+	static components = {
+		bar: Bar
+	}
+}
+
+let w = new Watcher(document.body, {
+	components: {
+		foo: Foo
+	}
+})
+
+w.init()
+```
+
+```html
+<div ob-foo="text: Parent">
+	<div ob-foo-bar="text: Child"></div>
+</div>
+```
+
+Similarly, the child component can have child components of its own:
+
+```js
+class Baz extends Component { }
+
+class Bar extends Component {
+	static components = {
+		baz: Baz
+	}
+}
+```
+
+```html
+<div ob-foo="text: Parent">
+	<div ob-foo-bar="text: Child">
+		<div ob-foo-bar-baz="text: Grandchild"></div>
+	</div>
+</div>
+```
+
+Learn more in the [Components page](/components).
+
+Note, however, that child components don't have to be direct child elements in the DOM. They just need to be somewhere inside them. This means you can have whatever HTML structure you want:
+
+```html
+<section ob-foo>
+	<div class="wrapper">
+		<span>Some element</span>
+		<div ob-foo-bar>
+			<span>Bar child</span>
+			<div>
+				<div ob-foo-bar-baz>Grandchild</div>
+			</div>
+		</div>
+	</div>
+</section>
+```
+
+## Prefix
+
+If you don't want to use the `ob` prefix in your HTML, you can change it:
+
+```js
+let w = new Watcher(document.body, {
+	prefix: 'data',
+	components: {
+		foo: Foo,
+		bar: Bar,
+		...
+	}
+})
+```
+
+```html
+<div data-foo>Foo component</div>
+<div data-bar>Bar component</div>
+```
