@@ -1,0 +1,45 @@
+Title: Animation
+
+----
+
+Content:
+
+Interpolates between `0` and `1` over a duration. Extends the (link: utilities/tween text: Tween) and does pretty much the same thing except it automatically executes itself on [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) until the end is reached.
+
+```js
+import { Animation } from 'oblik/utils'
+import { easeOutQuad } from 'oblik/utils/easings'
+
+let anim = new Animation(500, easeOutQuad)
+anim.on('update', console.log)
+anim.run()
+```
+
+```text
+0.062976
+0.093692
+...
+0.997084
+0.999631
+1
+```
+
+In the `update` event, you can use the current value to make an animation effect.
+
+## Events
+
+### `start`
+
+Fired when the animation enters a running state.
+
+### `update(value: number)`
+
+Fired when the value is updated and that value is passed as the first argument.
+
+### `end`
+
+Fired after the last step of the animation has run, i.e. when it has completed.
+
+### `stop`
+
+Fired when the `stop()` method is called.
