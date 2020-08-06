@@ -1,0 +1,35 @@
+Title: Browser
+
+----
+
+Content:
+
+Very simple browser detection module.
+
+```js
+import { browser, mobile } from 'oblik/utils/browser'
+
+let name = browser()
+let isMobile = mobile()
+
+console.log(name) // chrome
+console.log(isMobile) // false
+```
+
+## Exports
+
+### `browser(): string`
+
+Returns the browser vendor name:
+
+- `firefox`
+- `edge`
+- `chrome`
+- `safari`
+- `ie`
+
+If the name could not be determined, `null` is returned.
+
+### `mobile(): boolean`
+
+Returns whether the browser is mobile.
