@@ -1,0 +1,52 @@
+Title: Config
+
+----
+
+Content:
+
+Specifying component options in HTML attributes with JSON can be tough to read and write. That's why Oblik uses its own single line configuration format to alleviate that. This format is used by the Watcher and the config utility provides a parser for it.
+
+```js
+import { Parser } from 'oblik/utils/config'
+
+let parser = new Parser()
+let result = parser.parse('foo: bar, !baz')
+console.log(result) // { foo: "bar", baz: false }
+```
+
+## Syntax
+
+It's a lot like JSON:
+
+- Keys are separated from values with `:`
+- Key-value pairs are separated with `,`
+- Objects are delimited with `{` and `}`
+- Arrays are delimited with `[` and `]`
+
+Except:
+
+- Quotation marks are omitted
+- Optional starting and ending bracket
+- Optional `:` and `,` before and after arrays/objects
+- Object keys with no values are set to `true`
+- Object keys with no values that begin with `!` are set to `false`
+- Explicit strings are delimited with `` ` `` which is escaped with `\`
+
+## Example
+
+```text
+text: Hello, data { type: string, !isActive, numbers [5, 6] }
+```
+
+...results in:
+
+```json
+{
+	"text": "Hello",
+	"data": {
+		"type": "string",
+		"isActive": false,
+		"numbers": [5, 6]
+	}
+}
+```
