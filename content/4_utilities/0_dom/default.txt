@@ -1,0 +1,62 @@
+Title: DOM
+
+----
+
+Content:
+
+### `findAncestor`
+
+```ts
+function findAncestor (
+	element: Element,
+	predicate: (element: Element) => boolean
+): Element
+```
+
+Returns the first parent element that matches the predicate.
+
+### `findAnchor`
+
+```ts
+function findAnchor (element: Element): HTMLAnchorElement
+```
+
+Returns the first element in the parent tree that has an `<a>` tag, or the input element itself.
+
+### `offsetGlobal`
+
+```ts
+function offsetGlobal (element: HTMLElement, reference?: any): {
+    top: number;
+    left: number;
+}
+```
+
+Returns the page offset of an element according to the sum of its ancestors' offsets.
+
+### `getClientRect`
+
+```ts
+function getClientRect (input: Window | Element): ClientRect
+```
+
+Calls getBoundingClientRect when the input is an Element and returns it. If the input is Window, an object with a ClientRect shape is returned instead.
+
+### `copyToClipboard`
+
+```ts
+function copyToClipboard (input: string): void
+```
+
+Uses the Selection API to put a string in the user's clipboard.
+
+### `injectScript`
+
+```ts
+function injectScript (
+	src: string,
+	async?: boolean
+): Promise<Event>
+```
+
+Injects a `<script>` tag in the `<head>` and returns a Promise.
