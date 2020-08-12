@@ -7,7 +7,7 @@ Content:
 Interpolates between `0` and `1` over a duration. Extends the (link: utilities/tween text: Tween) and does pretty much the same thing except it automatically executes itself on [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) until the end is reached.
 
 ```js
-import { Animation } from 'oblik/utils'
+import { Animation } from 'oblik/utils/animation'
 import { easeOutQuad } from 'oblik/utils/easings'
 
 let anim = new Animation(500, easeOutQuad)
