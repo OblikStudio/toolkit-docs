@@ -1,0 +1,86 @@
+Title: Easings
+
+----
+
+Content:
+
+Collection of easings functions. These functions all take a single value ranging from `0` to `1` as input and return the eased value. Example with an (link: utilities/animation text: Animation):
+
+```ts
+import { Animation } from 'oblik/utils/animation'
+import { linear, easeOutQuad } from 'oblik/utils/easings'
+
+let anim = new Animation(500)
+
+anim.on('update', step => {
+	console.log(linear(step), easeOutQuad(step))
+})
+
+anim.run()
+```
+
+```text
+0.000 0.000
+0.098 0.186
+0.262 0.455
+0.576 0.820
+0.808 0.963
+0.978 0.999
+1.000 1.000
+```
+
+You can see a visual example of most easings at [easings.net](https://easings.net/).
+
+### `linear`
+
+### `easeInQuad`
+
+### `easeOutQuad`
+
+### `easeInOutQuad`
+
+### `easeInCubic`
+
+### `easeOutCubic`
+
+### `easeInOutCubic`
+
+### `easeInQuart`
+
+### `easeOutQuart`
+
+### `easeInOutQuart`
+
+### `easeInQuint`
+
+### `easeOutQuint`
+
+### `easeInOutQuint`
+
+### `easeInSine`
+
+### `easeOutSine`
+
+### `easeInOutSine`
+
+### `easeInExpo`
+
+### `easeOutExpo`
+
+### `easeInOutExpo`
+
+### `easeInCirc`
+
+### `easeOutCirc`
+
+### `easeInOutCirc`
+
+### `easeInBack`
+
+### `easeOutBack`
+
+### `easeInOutBack`
+
+### `easeOutElastic`
+
+### `easeOutBounce`
