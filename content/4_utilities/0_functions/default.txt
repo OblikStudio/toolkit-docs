@@ -1,0 +1,45 @@
+Title: Functions
+
+----
+
+Content:
+
+[Lodash](https://lodash.com/)-like helper functions.
+
+### `isObject`
+
+```ts
+function isObject (input: any): input is object
+```
+
+Checks if the input is `typeof 'object'` and not `null`.
+
+### `merge`
+
+```ts
+function merge (target: object, ...sources: object[]): any
+```
+
+Recursively merges own properties from `sources` to `target`. Used in components to merge default options with input options.
+
+### `debounce`
+
+```ts
+function debounce<T extends (...args: any) => any> (
+	callback: T,
+	time: number
+): (...args: Parameters<T>) => void
+```
+
+Implementation of [debounce](https://css-tricks.com/debouncing-throttling-explained-examples/#debounce), which "groups" multiple sequential calls to a function in a single one.
+
+### `throttle`
+
+```ts
+function throttle<T extends (...args: any) => any> (
+	callback: T,
+	time: number
+): (...args: Parameters<T>) => void
+```
+
+Implementation of [throttle](https://css-tricks.com/debouncing-throttling-explained-examples/#throttle), which prevents a function from executing more than once every X milliseconds.
