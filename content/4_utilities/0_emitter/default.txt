@@ -1,0 +1,52 @@
+Title: Emitter
+
+----
+
+Content:
+
+Class that implements the event emitter pattern. Allows you to specify the context (`this` value) and to remove listeners based on that context.
+
+```js
+import { Emitter } from 'oblik/utils/emitter'
+
+let emitter = new Emitter()
+let listener = function (value, value2) {
+	console.log('context', this)
+	console.log('values', value, value2)
+}
+
+emitter.on(
+	'test',   // event name
+	listener, // callback
+	'foo'     // context
+)
+
+// Emit a "test" event with the values "bar" and "baz"
+emitter.emit('test', 'bar', 'baz')
+
+// Remove the specified listener from the "test" event.
+emitter.off('test', listener)
+
+// Remove all "test" listeners where the context is "foo".
+emitter.off('test', null, 'foo')
+
+// Remove all listeners where the context is "foo".
+emitter.purge('foo')
+```
+
+```text
+context "foo"
+values "bar" "baz"
+```
+
+If you're using TypeScript, you can specify event types as well:
+
+```ts
+type Events = {
+	foo: (text: string) => void
+}
+
+let emitter = new Emitter<Events>()
+emitter.emit('foo', 42) // Argument of type '42' is not assignable
+                        // to parameter of type 'string'. ts(2345)
+```
