@@ -1,0 +1,66 @@
+Title: Gesture
+
+----
+
+Content:
+
+Allows you to handle mouse and touch events together and provides you useful data like movement delta and the pointer speed in pixels per second. You can use this to create your own mouse or touch based logic the same way it's used in the (link: components/carousel text: Carousel) component for changing slides.
+
+```js
+import { Gesture } from 'oblik/utils'
+
+let gesture = new Gesture(document.body)
+
+gesture.on('start', event => {
+	// Mouse down or touch started.
+})
+
+gesture.on('move', event => {
+	// Mouse position or touch updated.
+})
+
+gesture.on('end', event => {
+	// Mouse up or all fingers are up.
+})
+```
+
+## Swipes
+
+Gestures are managed with the Swipe abstraction. On desktop, there's always one swipe - the mouse pointer. On mobile, however, you can touch with multiple fingers, and you therefore have multiple swipes.
+
+```js
+gesture.swipes.forEach(swipe => {
+	// Do something with each swipe.
+})
+```
+
+The Swipe objects have the following properties:
+
+- `origin` - coordinates of the start event
+- `position` - coordinates of the most recent move event
+- `delta` - vector describing the movement direction
+- `speed` - pointer speed in pixels per second
+
+## Events
+
+All events are emitted with either the [`MouseEvent`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent) or [`TouchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent) that happened. This is described by the `GestureEvent` type.
+
+### `start (event: GestureEvent)`
+
+Fired when the first swipe starts.
+
+### `down (event: GestureEvent)`
+
+Fired whenever a new swipe starts, which means `mousedown` and `touchstart`.
+
+### `move (event: GestureEvent)`
+
+Fried whenever a swipe is updated, which means `mousemove` and `touchmove`.
+
+### `up (event: GestureEvent)`
+
+Fired whenever a swipe ends, which means `mouseup`, `mouseleave`, `touchend`, and `touchcancel`.
+
+### `end (event: GestureEvent)`
+
+Fired when the last swipe ends.
