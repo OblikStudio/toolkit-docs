@@ -1,0 +1,59 @@
+Title: Math
+
+----
+
+Content:
+
+Helper classes and functions for math-related logic.
+
+## Point
+
+### Properties
+
+#### `x: number`
+
+#### `y: number`
+
+### Methods
+
+#### `copy(): Point`
+
+Clones to another Point object.
+
+#### `add(input: number | Vector, y?: number): void`
+
+Add either numbers or a Vector.
+
+#### `subtract(input: Point): this`
+
+Subctract another Point object.
+
+#### `to(input: Point): Vector`
+
+Return a Vector from this Point to the `input` Point.
+
+## Vector
+
+### Properties
+
+#### `magnitude: number`
+
+#### `direction: number`
+
+### Methods
+
+#### `set(p1: Point, p2?: Point): void`
+
+Point the Vector from `p1` to `p2`.
+
+#### `add(vector: Vector): void`
+
+Add another Vector.
+
+---
+
+## Functions
+
+#### `clamp(number: number, min: number, max: number): number`
+
+Restricts a value to a specified minimum and maximum.
