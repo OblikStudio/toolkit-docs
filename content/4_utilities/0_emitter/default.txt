@@ -50,3 +50,13 @@ let emitter = new Emitter<Events>()
 emitter.emit('foo', 42) // Argument of type '42' is not assignable
                         // to parameter of type 'string'. ts(2345)
 ```
+
+## Promises
+
+You can also wait for an event with a Promise. It's just a promisified `once()` call:
+
+```js
+emitter.promise('test').then(() => {
+	// "test" event resolved
+})
+```
