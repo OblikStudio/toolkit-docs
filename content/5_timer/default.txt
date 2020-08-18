@@ -1,0 +1,56 @@
+Title: Timer
+
+----
+
+Content:
+
+Instance of a (link: utilities/ticker text: Ticker) that is meant to synchronize your repetitive per-frame logic. Some components and utilities internally use this ticker:
+
+```js
+import { ticker } from 'oblik'
+
+ticker.on('tick', () => {
+	// Called on each requestAnimationFrame()
+})
+```
+
+Additionally, you can use the `measure()` and `mutate()` hooks to combine multiple DOM reads and writes together, similar to [fastdom](https://github.com/wilsonpage/fastdom), and avoid [layout thrashing](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing):
+
+```js
+import { measure, mutate } from 'oblik'
+
+measure(() => {
+	console.log('measure 1')
+})
+
+mutate(() => {
+	console.log('mutate 1')
+})
+
+measure(() => {
+	console.log('measure 2')
+})
+
+mutate(() => {
+	console.log('mutate 2')
+})
+```
+
+```text
+measure 1
+measure 2
+mutate 1
+mutate 2
+```
+
+As you can see, all `measure` callbacks are invoked first and then all `mutate` callbacks. You can also use promises:
+
+```js
+measure().then(() => {
+	console.log('measure 1')
+})
+
+mutate().then(() => {
+	console.log('mutate 1')
+})
+```
