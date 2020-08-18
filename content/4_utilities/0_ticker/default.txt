@@ -1,0 +1,20 @@
+Title: Ticker
+
+----
+
+Content:
+
+Uses [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) to continuously emit a `tick` event and provide the passed time since the last tick. This is used in the (link: utilities/animation text: Animation) utility to execute the logic on each frame.
+
+```js
+import { Ticker } from 'oblik/utils/ticker'
+
+let ticker = new Ticker()
+
+ticker.on('tick', delta => {
+	// `delta` is the time in milliseconds
+	// since the last call
+})
+
+ticker.start()
+```
