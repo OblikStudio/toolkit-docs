@@ -1,0 +1,65 @@
+Title: Scroll
+
+----
+
+Content:
+
+Extends the (link: utilities/animation text: Animation) utility and gives you the ability to animate scrolling:
+
+```js
+import { ScrollAnimation } from 'oblik/utils/scroll'
+import { easeOutExpo } from 'oblik/utils/easings'
+
+let animation = new ScrollAnimation({
+	offset: 600,
+	duration: 1200,
+	easing: easeOutExpo
+})
+
+animation.run()
+```
+
+You can also use the `scrollTo()` export as well:
+
+```js
+import { scrollTo } from 'oblik/utils/scroll'
+import { easeOutExpo } from 'oblik/utils/easings'
+
+scrollTo({
+	offset: 600,
+	duration: 1200,
+	easing: easeOutExpo
+})
+```
+
+## Options
+
+### `duration`
+
+Length of the animation.
+
+**Required.**
+
+### `easing`
+
+An (link: utilities/easings text: easing) function.
+
+**Default:** `linear`
+
+### `target`
+
+Element that should be scrolled into view.
+
+**Default:** `undefined`
+
+### `offset`
+
+If `target` is specified, `offset` will simply be added to the target element's position. Otherwise, it will scroll to `offset` pixels past the document top.
+
+**Default:** `0`
+
+### `interruptible`
+
+Whether the scroll animation can be interrupted by user input, such as mouse scroll or touch.
+
+**Default:** `true`
