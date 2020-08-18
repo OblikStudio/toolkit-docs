@@ -1,0 +1,30 @@
+Title: Tween
+
+----
+
+Content:
+
+Eases between `0` and `1` over a duration. You manually call `step()` to advance the tween in your custom event loop:
+
+```js
+import { Tween } from 'oblik/utils/tween'
+import { easeOutExpo } from 'oblik/utils/easings'
+
+let tween = new Tween(1000, easeOutExpo)
+
+tween.on('update', value => {
+	console.log('value', value)
+})
+
+setInterval(() => {
+	tween.step()
+}, 200)
+```
+
+```text
+value 0.7534418238766603
+value 0.9383604559691651
+value 0.9844829297587964
+value 0.9961207324396991
+value 1
+```
