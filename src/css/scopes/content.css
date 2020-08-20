@@ -43,6 +43,10 @@
 		&:hover {
 			@apply underline;
 		}
+
+		&[target="_blank"] {
+			color: #f71a1a;
+		}
 	}
 
 	& > pre {
