@@ -1,1 +1,1 @@
-import './oblik/src/polyfills'
+import 'oblik/polyfills'

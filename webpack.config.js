@@ -19,10 +19,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'assets')
 	},
 	resolve: {
-		extensions: ['.ts', '.js'],
-		alias: {
-			oblik: path.resolve(__dirname, 'src/js/oblik/src')
-		}
+		extensions: ['.ts', '.js']
 	},
 	plugins: [
 		new MiniCssExtractPlugin({

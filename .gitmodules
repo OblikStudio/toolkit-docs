@@ -1,3 +1,0 @@
-[submodule "src/js/oblik"]
-	path = src/js/oblik
-	url = git@github.com:oblikjs/oblik.git

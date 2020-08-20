@@ -1,4 +1,4 @@
-import { Tabs, Item } from '../oblik/src/components/tabs'
+import { Tabs, Item } from 'oblik/components/tabs'
 
 class CustomItem extends Item {
 	$options: {

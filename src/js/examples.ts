@@ -1,5 +1,5 @@
-import { Watcher } from './oblik/src/index'
-import * as classes from './oblik/src/components'
+import { Watcher } from 'oblik'
+import * as classes from 'oblik/components'
 
 let components = {}
 
