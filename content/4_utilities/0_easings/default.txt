@@ -29,7 +29,7 @@ anim.run()
 1.000 1.000
 ```
 
-You can see a visual example of most easings at [easings.net](https://easings.net/).
+You can see a visual example of most easings at (link: https://easings.net/ text: easings.net target: _blank).
 
 ### `linear`
 

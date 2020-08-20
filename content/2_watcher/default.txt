@@ -6,7 +6,7 @@ Content:
 
 Unless you're using a library like Vue or React, separating JavaScript functionality in components can be hard to do and maintain. You can split your code in multiple modules or classes, but you still have to initialize it with actual DOM elements and clean it up later.
 
-In Oblik, components are simply ES6 classes and the Watcher is a tool that initializes and destroys them automatically as they're added/removed from the DOM. It does that with the help of a [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).
+In Oblik, components are simply ES6 classes and the Watcher is a tool that initializes and destroys them automatically as they're added/removed from the DOM. It does that with the help of a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver target: _blank).
 
 Let's create a very simple component:
 
@@ -75,7 +75,7 @@ With the Watcher, we specify them in the HTML attribute:
 <div ob-foo="text: Hello, num: 42">My Foo component</div>
 ```
 
-This custom syntax comes from the (link: #todo text: Config) utility. But we can use JSON as well:
+This custom syntax comes from the (link: utilities/config text: Config) utility. But we can use JSON as well:
 
 ```html
 <div ob-foo='{"text": "Hello", "num": 42}'>My Foo component</div>
@@ -107,11 +107,11 @@ Additionally, you can query elements relative to the component:
 </div>
 ```
 
-The above would select `<p>` as the `target`. This is done with the (link: #todo text: Query) utility.
+The above would select `<p>` as the `target`. This is done with the (link: utilities/query text: Query) utility.
 
 ## Subcomponents
 
-To specify child components of a component, you need to use the static [`components` property](/components#components):
+To specify child components of a component, you need to use the static `(link: components#components text: components)` property:
 
 ```js
 class Bar extends Component { }
@@ -157,7 +157,7 @@ class Bar extends Component {
 </div>
 ```
 
-Learn more in the [Components page](/components).
+Learn more in the (link: components text: Components) page.
 
 Note, however, that child components don't have to be direct child elements in the DOM. They just need to be somewhere inside them. This means you can have whatever HTML structure you want:
 

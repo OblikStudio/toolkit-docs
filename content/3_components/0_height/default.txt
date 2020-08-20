@@ -4,11 +4,11 @@ Title: Height
 
 Content:
 
-Uses a (link: #todo text: Poller) to continuously retrieve the height of an element and apply it either as an inline style or CSS variable. This is useful when you want to animate the height of an element with dynamic content using CSS transitions.
+Uses a (link: utilities/poller text: Poller) to continuously retrieve the height of an element and apply it either as an inline style or CSS variable. This is useful when you want to animate the height of an element with dynamic content using CSS transitions.
 
 (example: height active: result)
 
-The reason this component is needed is because you can't transition between height `auto` and some other value. [Read more on CSS-Tricks](https://css-tricks.com/using-css-transitions-auto-dimensions/). Most of the time, we want to animate between `height: 0px` and the natural height of the element. However, the natural height is `auto` and we can't animate it. That's where this component helps - it applies an explicit value in `px` that equals the height of our content so we can animate it.
+The reason this component is needed is because you can't transition between height `auto` and some other value. Read more (link: https://css-tricks.com/using-css-transitions-auto-dimensions/ text: on CSS-Tricks target: _blank). Most of the time, we want to animate between `height: 0px` and the natural height of the element. However, the natural height is `auto` and we can't animate it. That's where this component helps - it applies an explicit value in `px` that equals the height of our content so we can animate it.
 
 By default, this component monitors the height of its first child and applies it to itself. For example:
 

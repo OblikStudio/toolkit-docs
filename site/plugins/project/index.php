@@ -38,6 +38,7 @@ App::plugin('oblik/docs', [
 	'fieldMethods' => [
 		'clean' => function ($field) {
 			$field->value = preg_replace('/<p>(\(.*?\))<\/p>/', '$1', $field->value);
+			$field->value = preg_replace('!<a[^>]+>([^<]+)</a>!', '$1', $field->value);
 			return $field;
 		},
 		'headings' => function ($field, callable $replace = null) {

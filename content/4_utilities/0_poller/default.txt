@@ -4,9 +4,9 @@ Title: Poller
 
 Content:
 
-Uses the (link: ticker text: Ticker) to poll for changes on an object. For example, this is useful for detecting when an element's size changes, since there's no DOM event for that.
+Uses the (link: timer text: Timer) to poll for changes on an object. For example, this is useful for detecting when an element's size changes, since there's no DOM event for that.
 
-**Note:** Although the poller fires on [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame), be wary for performance issues. Make sure to check if there's an alternative to polling.
+**Note:** Although the poller fires on `(link: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame text: requestAnimationFrame target: _blank)`, be wary for performance issues. Make sure to check if there's an alternative to polling.
 
 ```js
 import { Poller } from 'oblik/utils/poller'

@@ -8,7 +8,7 @@ Utility for querying DOM elements, used in the (link: watcher text: Watcher).
 
 ## Class
 
-The [Query](src/query.ts) class provides a chainable API for querying elements:
+The Query class provides a chainable API for querying elements:
 
 ```js
 import { Query } from 'oblik/utils/query'

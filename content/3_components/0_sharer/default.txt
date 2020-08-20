@@ -14,11 +14,11 @@ Opens a social media sharer window with prefilled URL and text or copies the pag
 
 Which social media sharer to invoke:
 
-- [`facebook`](https://developers.facebook.com/docs/plugins/share-button)
-- [`twitter`](https://developer.twitter.com/en/docs/twitter-for-websites/web-intents/overview)
-- [`linkedin`](https://stackoverflow.com/a/33746543/3130281)
-- [`reddit`](https://stackoverflow.com/a/24851347/3130281)
-- [`pinterest`](https://stackoverflow.com/a/11212220/3130281)
+- `(link: https://developers.facebook.com/docs/plugins/share-button text: facebook target: _blank)`
+- `(link: https://developer.twitter.com/en/docs/twitter-for-websites/web-intents/overview text: twitter target: _blank)`
+- `(link: https://stackoverflow.com/a/33746543/3130281 text: linkedin target: _blank)`
+- `(link: https://stackoverflow.com/a/24851347/3130281 text: reddit target: _blank)`
+- `(link: https://stackoverflow.com/a/11212220/3130281 text: pinterest target: _blank)`
 
 Can also be set to `copy` to copy the URL to the clipboard instead.
 

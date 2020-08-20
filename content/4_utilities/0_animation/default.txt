@@ -4,7 +4,7 @@ Title: Animation
 
 Content:
 
-Interpolates between `0` and `1` over a duration. Extends the (link: utilities/tween text: Tween) and does pretty much the same thing except it automatically executes itself on [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) until the end is reached.
+Interpolates between `0` and `1` over a duration. Extends the (link: utilities/tween text: Tween) and does pretty much the same thing except it automatically executes itself on `(link: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame text: requestAnimationFrame target: _blank)` until the end is reached.
 
 ```js
 import { Animation } from 'oblik/utils/animation'

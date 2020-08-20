@@ -6,7 +6,7 @@ Content:
 
 Oblik Toolkit is a collection of minimal and extensible JavaScript components and utilities. It's not focused on reactivity like Vue or React. It's also not a framework with predesigned components like Bootstrap. What it _does_ focus on is just interactive behaviors. Things like parallax and scroll effects, sliders, etc.
 
-The toolkit can be compared to [UIKit](https://getuikit.com/), from which it has drawn a lot of inspiration. The main difference is that Oblik focuses solely on the JavaScript parts and depends on CSS as little as possible, leaving styling in your hands.
+The toolkit can be compared to (link: https://getuikit.com/ text: UIKit target: _blank), from which it has drawn a lot of inspiration. The main difference is that Oblik focuses solely on the JavaScript parts and depends on CSS as little as possible, leaving styling in your hands.
 
 Main goals of the project are:
 
@@ -24,11 +24,11 @@ Oblik is meant to be used as a dependency in your project where you import just 
 
 ## Examples
 
-The most direct way to use a component is to simply import it and attach it to an element with JavaScript. Here's an example with the (link: #todo text: Carousel) component:
+The most direct way to use a component is to simply import it and attach it to an element with JavaScript. Here's an example with the (link: components/carousel text: Carousel) component:
 
 (example: carousel active: js)
 
-However, having to manually query the needed DOM elements and intialize your components can become annoying and tough to deal with. That's where the (link: #todo text: Watcher) helps. It binds a [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to an element (like the `<body>`) then automatically creates and destroys components you've registered:
+However, having to manually query the needed DOM elements and intialize your components can become annoying and tough to deal with. That's where the (link: watcher text: Watcher) helps. It binds a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver target: _blank) to an element (like the `<body>`) then automatically creates and destroys components you've registered:
 
 (example: carousel-watcher active: js)
 
@@ -62,11 +62,11 @@ The long-term goal of Oblik is to provide functionality that has a lot of option
 - tries to handle every edge case 
 - uses a large configuration object
 
-...the target of Oblik is to provide [object-oriented](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS) components that:
+...the target of Oblik is to provide (link: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS text: object-oriented target: _blank) components that:
 
 - are straightforward
 - handle the majority of use cases
-- can be configured through [inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- can be configured through (link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain text: inheritance target: _blank)
 
 In general, the idea is that instead of having one very large and complicated module, you have a base class with the base functionality. The source code is simple to understand and well documented. From there, you can get the _exact_ behavior you want by extending a method here and there.
 

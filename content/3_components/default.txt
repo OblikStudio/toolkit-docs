@@ -4,7 +4,7 @@ Title: Components
 
 Content:
 
-Reusable JavaScript logic is encapsulated in components via [ES6 classes](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes). You can create your own Oblik components by simply extending the base component:
+Reusable JavaScript logic is encapsulated in components via (link: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes text: ES6 classes target: _blank). You can create your own Oblik components by simply extending the base component:
 
 ```js
 import { Component } from 'oblik'
@@ -51,7 +51,7 @@ instance.$init()                 // 'initialized'
 instance.$destroy()              // 'destroyed'
 ```
 
-When using the Watcher, the code above is obsolete since components are managed automatically. Learn more about the [Watcher](/watcher).
+When using the Watcher, the code above is obsolete since components are managed automatically. Learn more about the (link: watcher text: Watcher).
 
 ## Properties
 
@@ -101,7 +101,7 @@ Reference to the parent component, if there is one.
 
 ## Static Properties
 
-Properties like `$element` are present on component _instances_ (objects created with the `new` keyword). Static properties are part of the component definition itself (the `class` declaration). [Read about classes on MDN.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+Properties like `$element` are present on component _instances_ (objects created with the `new` keyword). Static properties are part of the component definition itself (the `class` declaration). Read about classes (link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes text: on MDN target: _blank).
 
 ### `components`
 

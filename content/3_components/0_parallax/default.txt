@@ -4,7 +4,7 @@ Title: Parallax
 
 Content:
 
-Compares the [bounding client rect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) of an element to that of another element or the `window` and then applies CSS variables to allow styling.
+Compares the (link: https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect text: bounding client rect target: _blank) of an element to that of another element or the `window` and then applies CSS variables to allow styling.
 
 (example: parallax active: result)
 

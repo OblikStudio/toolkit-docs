@@ -4,6 +4,6 @@ Title: Masonry
 
 Content:
 
-Applies negative CSS margin to items so that they appear stacked on top of each other. Uses a (link: #todo text: Poller) to recalculate when items change.
+Applies negative CSS margin to items so that they appear stacked on top of each other. Uses a (link: utilities/poller text: Poller) to recalculate when items change.
 
 (example: masonry active: result)

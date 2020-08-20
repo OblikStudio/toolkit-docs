@@ -43,7 +43,7 @@ The Swipe objects have the following properties:
 
 ## Events
 
-All events are emitted with either the [`MouseEvent`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent) or [`TouchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent) that happened. This is described by the `GestureEvent` type.
+All events are emitted with either the `(link: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent text: MouseEvent target: _blank)` or `(link: https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent text: TouchEvent target: _blank)` that happened. This is described by the `GestureEvent` type.
 
 ### `start (event: GestureEvent)`
 

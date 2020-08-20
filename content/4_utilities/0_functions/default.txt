@@ -4,7 +4,7 @@ Title: Functions
 
 Content:
 
-[Lodash](https://lodash.com/)-like helper functions.
+(link: https://lodash.com/ text: Lodash target: _blank)-like helper functions.
 
 ### `isObject`
 
@@ -31,7 +31,7 @@ function debounce<T extends (...args: any) => any> (
 ): (...args: Parameters<T>) => void
 ```
 
-Implementation of [debounce](https://css-tricks.com/debouncing-throttling-explained-examples/#debounce), which "groups" multiple sequential calls to a function in a single one.
+Implementation of (link: https://css-tricks.com/debouncing-throttling-explained-examples/#debounce text: debounce target: _blank), which "groups" multiple sequential calls to a function in a single one.
 
 ### `throttle`
 
@@ -42,4 +42,4 @@ function throttle<T extends (...args: any) => any> (
 ): (...args: Parameters<T>) => void
 ```
 
-Implementation of [throttle](https://css-tricks.com/debouncing-throttling-explained-examples/#throttle), which prevents a function from executing more than once every X milliseconds.
+Implementation of (link: https://css-tricks.com/debouncing-throttling-explained-examples/#throttle text: throttle target: _blank), which prevents a function from executing more than once every X milliseconds.
