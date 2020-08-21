@@ -1,0 +1,31 @@
+Title: Installation
+
+----
+
+Content:
+
+See how to install and use Oblik Toolkit in your project.
+
+## With a package manager 
+
+Using (link: https://www.npmjs.com/package/oblik text: npm target: _blank):
+
+```text
+npm install oblik
+```
+
+Using (link: https://classic.yarnpkg.com/en/package/oblik text: yarn target: _blank):
+
+```text
+yarn add oblik
+```
+
+## From a CDN
+
+You can load a bundle with all components and utilities from (link: https://www.jsdelivr.com/package/npm/oblik text: jsDelivr target: _blank):
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/oblik@latest/dist/oblik.js"></script>
+```
+
+**Note:** This will load **everything** from Oblik. If you have a build setup, it would be better to use a package manager, download Oblik, and import just the things you need. It's designed to be used like that.
