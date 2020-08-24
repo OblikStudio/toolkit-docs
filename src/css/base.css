@@ -1,6 +1,16 @@
-body:not(.is-kb-focus) {
-	button {
-		outline: none;
+* {
+	-webkit-tap-highlight-color: rgb(0, 0, 0, 0);
+}
+
+body {
+	&:not(.is-kb-focus) {
+		button {
+			outline: none;
+		}
+	}
+
+	&.is-active-nav {
+		overflow: hidden;
 	}
 }
 
@@ -12,7 +22,7 @@ pre[class*="language-"] {
 	@apply text-sm rounded-md;
 
 	padding: 0.2em 0.4em;
-    background-color: #edf2f7;
+	background-color: #edf2f7;
 }
 
 iframe {

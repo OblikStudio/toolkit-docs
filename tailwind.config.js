@@ -4,10 +4,7 @@ module.exports = {
 	separator: ':',
 	theme: {
 		screens: {
-			sm: '640px',
-			md: '768px',
-			lg: '1024px',
-			xl: '1280px',
+			md: '800px',
 		},
 		colors: {
 			transparent: 'transparent',
@@ -231,7 +228,6 @@ module.exports = {
 			'5xl': '64rem',
 			'6xl': '72rem',
 			full: '100%',
-			content: '40rem',
 			...breakpoints(theme('screens')),
 		}),
 		minHeight: {

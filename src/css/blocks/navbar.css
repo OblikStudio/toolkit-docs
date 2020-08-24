@@ -1,0 +1,50 @@
+.b-navbar {
+	@apply transition duration-200 ease-out;
+
+	&.is-scrolled-up.is-scrolled {
+		@apply shadow-md;
+	}
+
+	&:not(.is-scrolled-up) {
+		transform: translateY(-100%);
+	}
+
+	body.is-active-nav & {
+		@apply shadow-md;
+		transform: none;
+	}
+
+	&__toggle {
+		svg {
+			overflow: visible;
+
+			path {
+				@apply transition-transform duration-300 ease-out;
+			}
+
+			path:nth-child(1) {
+				transform-origin: 50% 25%;
+
+				body.is-active-nav & {
+					transform: translateY(25%) rotate(-225deg);
+				}
+			}
+
+			path:nth-child(2) {
+				transform-origin: center;
+
+				body.is-active-nav & {
+					transform: rotate(-135deg);
+				}
+			}
+
+			path:nth-child(3) {
+				transform-origin: 50% 75%;
+
+				body.is-active-nav & {
+					transform: translateY(-25%) rotate(-135deg);
+				}
+			}
+		}
+	}
+}

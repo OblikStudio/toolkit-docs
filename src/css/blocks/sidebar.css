@@ -1,5 +1,20 @@
 .b-sidebar {
+	@apply bg-white transition duration-300 ease-out;
+	width: 18rem;
+	padding-top: 48px;
+	box-shadow: 6px 0px 56px 45px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
 	@screen md {
-		width: 18rem;
+		@apply bg-gray-200;
+		padding-top: 0;
+		box-shadow: none;
+	}
+
+	@media (max-width: theme("screens.md")) {
+		body:not(.is-active-nav) & {
+			transform: translateX(-100%);
+			box-shadow: none;
+		}
 	}
 }

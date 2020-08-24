@@ -1,0 +1,14 @@
+.b-content {
+	@apply px-4;
+
+	@screen md {
+		max-width: 44rem;
+		padding: 0 2rem;
+		margin-right: 0;
+		margin-left: 18rem;
+	}
+
+	@media (min-width: 1280px) {
+		@apply mx-auto;
+	}
+}
