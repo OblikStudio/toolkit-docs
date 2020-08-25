@@ -18,4 +18,12 @@ let w = new Watcher(document.body, {
 
 w.init()
 
+let navToggle = document.querySelector('.b-navbar__toggle')
+let navPad = document.querySelector('.b-sidebar__pad')
+let toggleComp = w.instance(navToggle, 'toggle') as toggle
+
+navPad.addEventListener('click', () => {
+	toggleComp.off()
+})
+
 document.addEventListener('click', scrollto.clickHandler())
