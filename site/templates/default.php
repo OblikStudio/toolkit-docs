@@ -41,7 +41,7 @@
 
 	<hr class="my-12 border-t-2 border-gray-200">
 
-	<div class="flex -my-4 text-xl">
+	<div class="flex -my-4 text-lg md:text-xl">
 		<?php
 		$all = $site->index()->listed();
 		$index = $all->indexOf($page);
@@ -51,13 +51,13 @@
 		?>
 
 		<?php if ($prev) : ?>
-			<a class="b-anchor py-4 text-accent font-bold" href="<?= $prev->url() ?>">
+			<a class="b-anchor py-4 font-bold text-accent" href="<?= $prev->url() ?>">
 				&larr; <?= $prev->title() ?>
 			</a>
 		<?php endif ?>
 
 		<?php if ($next) : ?>
-			<a class="b-anchor ml-auto py-4 text-accent font-bold" href="<?= $next->url() ?>">
+			<a class="b-anchor ml-auto py-4 font-bold text-accent" href="<?= $next->url() ?>">
 				<?= $next->title() ?> &rarr;
 			</a>
 		<?php endif ?>

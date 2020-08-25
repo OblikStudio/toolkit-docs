@@ -3,13 +3,16 @@
 
 	&:after {
 		/* Fixes text baseline alignment in <code>-only headings. */
-		content: '\00a0';
+		content: "\00a0";
 		user-select: none;
 	}
 
 	&__fragment {
-		@apply absolute block -my-2 p-2 opacity-0;
-		right: 100%;
+		@apply absolute right-0 block -my-2 p-2 opacity-0;
+
+		@screen md {
+			right: 100%;
+		}
 
 		&:focus {
 			@apply opacity-100;

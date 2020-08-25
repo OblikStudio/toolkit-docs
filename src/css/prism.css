@@ -28,8 +28,11 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	@apply rounded-md;
 	overflow: auto;
+
+	@screen md {
+		@apply rounded-md;
+	}
 }
 
 :not(pre) > code[class*="language-"],

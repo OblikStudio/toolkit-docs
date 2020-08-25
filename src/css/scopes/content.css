@@ -1,28 +1,51 @@
 .s-content {
-	@apply text-lg leading-normal;
+	@apply text-base leading-normal;
+
+	@screen md {
+		@apply text-lg;
+	}
 
 	h1 {
-		@apply mt-12 mb-6 text-4xl leading-none font-bold text-gray-800;
+		@apply mt-12 mb-4 text-3xl leading-none font-bold text-gray-800;
+
+		@screen md {
+			@apply mb-6 text-4xl;
+		}
 	}
 
 	h2 {
-		@apply mt-10 mb-6 text-2xl leading-none font-bold text-gray-800;
+		@apply mt-10 mb-4 text-xl leading-none font-bold text-gray-800;
+
+		@screen md {
+			@apply mb-6 text-2xl;
+		}
 	}
 
 	h3 {
-		@apply mt-8 mb-4 text-xl leading-tight font-bold text-gray-800;
+		@apply mt-8 mb-4 text-lg leading-tight font-bold text-gray-800;
+
+		@screen md {
+			@apply text-xl;
+		}
 
 		& > code {
 			font-size: 0.9em;
 		}
 	}
 
-	p, ul, ol {
+	p,
+	ul,
+	ol {
 		@apply my-4;
 	}
 
-	ul, ol {
-		@apply pl-8;
+	ul,
+	ol {
+		@apply pl-4;
+
+		@screen md {
+			@apply pl-8;
+		}
 	}
 
 	ul {
@@ -50,6 +73,10 @@
 	}
 
 	& > pre {
-		@apply my-8;
+		@apply my-4;
+
+		@screen md {
+			@apply my-6;
+		}
 	}
 }

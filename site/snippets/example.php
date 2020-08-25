@@ -19,23 +19,23 @@ if ($page->height()->isNotEmpty()) {
 ?>
 
 <div class="my-8" ob-tabs="<?= $data ?>">
-	<div class="flex -my-4">
+	<div class="flex -ml-2 md:ml-0 -my-4 md:pl-2">
 		<?php if ($html) : ?>
-			<button class="b-btn px-6 py-4" ob-tabs-toggle>HTML</button>
+			<button class="b-btn px-2 md:px-6 py-4" ob-tabs-toggle>HTML</button>
 		<?php endif ?>
 
 		<?php if ($css) : ?>
-			<button class="b-btn px-6 py-4" ob-tabs-toggle>CSS</button>
+			<button class="b-btn px-2 md:px-6 py-4" ob-tabs-toggle>CSS</button>
 		<?php endif ?>
 
 		<?php if ($js) : ?>
-			<button class="b-btn px-6 py-4" ob-tabs-toggle>JS</button>
+			<button class="b-btn px-2 md:px-6 py-4" ob-tabs-toggle>JS</button>
 		<?php endif ?>
 
-		<button class="b-btn px-6 py-4" ob-tabs-toggle>Result</button>
+		<button class="b-btn px-2 md:px-6 py-4" ob-tabs-toggle>Result</button>
 	</div>
 
-	<div class="mt-4 rounded-md overflow-hidden">
+	<div class="-mx-4 md:mx-0 mt-4 px-4 md:px-0 md:rounded-md overflow-hidden">
 		<?php if ($html) : ?>
 			<pre ob-tabs-item="id: html"><code class="language-html"><?= htmlspecialchars($html) ?></code></pre>
 		<?php endif ?>

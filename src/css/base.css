@@ -15,7 +15,11 @@ body {
 }
 
 pre[class*="language-"] {
-	@apply px-8 py-6 text-sm;
+	@apply -mx-4 px-4 py-6 text-xs;
+
+	@screen md {
+		@apply mx-0 px-8 text-sm;
+	}
 }
 
 :not(pre) > code {
