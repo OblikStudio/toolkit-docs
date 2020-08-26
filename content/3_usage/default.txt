@@ -1,0 +1,113 @@
+Title: Usage
+
+----
+
+Content:
+
+## Plain JavaScript
+
+The most direct way to use a component is to simply import it and attach it to an element with JavaScript. Here's an example with the (link: components/carousel text: Carousel) component:
+
+(example: carousel active: js)
+
+This gives you low level access to the lifecycle of components, allowing you to adapt them to other frameworks and libraries.
+
+## The Watcher
+
+Having to manually query the needed DOM elements and intialize your components can become annoying and tough to deal with. That's where the (link: watcher text: Watcher) helps. It binds a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver target: _blank) to an element (like the `<body>`), then automatically creates and destroys components you've registered:
+
+(example: carousel-watcher active: js)
+
+If you look at the HTML, you'll see that you can initialize components and assign options to them via attributes:
+
+```html
+<div ob-carousel>
+	<div ob-carousel-rail="infinite: true">
+		<div ob-carousel-rail-item>1</div>
+		<div ob-carousel-rail-item>2</div>
+		<div ob-carousel-rail-item>3</div>
+		<div ob-carousel-rail-item>4</div>
+	</div>
+</div>
+```
+
+Learn more about that option syntax (link: watcher#options text: here).
+
+## Custom components
+
+Since components are just (link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes text: ES6 classes target: _blank), you can easily create your own components by extending the base `Component` class:
+
+(example: custom-component active: js)
+
+### Subcomponents
+
+Similarly, components can have subcomponents by specifying the `components` static property:
+
+```js
+class Child extends Component {
+	...
+}
+
+class Parent extends Component {
+	static components = {
+		child: Child
+	}
+	...
+}
+```
+
+When using the Watcher, you register the parent component:
+
+```js
+let w = new Watcher(document.body, {
+	components: {
+		parent: Parent
+	}
+})
+```
+
+...and then just use it in your markup:
+
+```html
+<div ob-parent>
+	<button ob-parent-child>Child</button>
+</div>
+```
+
+Learn more about components (link: components text: here).
+
+## From a CDN
+
+In case you don't want to deal with ES6 and bundling scripts, you can load everything that Oblik has to offer from a CDN:
+
+(example: carousel-cdn active: html)
+
+You can create your own simple components in plain ES5 JavaScript as well:
+
+(example: custom-component-cdn active: js)
+
+## Wrapping other libraries
+
+At the very least, Oblik can be used to wrap other libraries as components and use the Watcher to make it easier to manage them from your HTML. Here's an example with (link: https://github.com/atomiks/tippyjs text: Tippy.js target: _blank):
+
+(example: tippy active: js)
+
+As you can see, it's easy to add your own layer of functionality on top of Tippy and use Oblik's (link: watcher#options text: options syntax) to customize tooltip instances and even query their content template:
+
+```html
+<button ob-tippy="$content: @sibling, trigger: click">
+	Click me!
+</button>
+
+<template>
+	This is a <strong>Tippy</strong> template!
+</template>
+```
+
+Another benefit is that when the `[ob-tippy]` element is removed from the DOM, the Watcher will automatically destroy the tooltip instance it has created. This allows you to worry less about memory management.
+
+## Utilities
+
+In case Oblik's components are not what you're after, perhaps one of its utilities can help. Here's an example with the (link: utilities/scroll text: Scroll) utility:
+
+(example: scroll-cdn active: js)
