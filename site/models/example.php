@@ -25,6 +25,18 @@ class ExamplePage extends Page
 		return $css;
 	}
 
+	public function getStylesheetURL()
+	{
+		$assets = kirby()->root('assets');
+		$slug = $this->slug();
+
+		if (file_exists("$assets/$slug.css")) {
+			return "assets/$slug.css";
+		} else {
+			return null;
+		}
+	}
+
 	public function getScriptURL()
 	{
 		$assets = kirby()->root('assets');

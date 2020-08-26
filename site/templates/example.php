@@ -9,6 +9,10 @@
 
 	<?= css('assets/main.css') ?>
 
+	<?php if ($sheet = $page->getStylesheetURL()) : ?>
+		<?= css($sheet) ?>
+	<?php endif ?>
+
 	<style>
 		<?= $page->getStyles() ?>
 	</style>

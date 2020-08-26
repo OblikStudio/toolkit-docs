@@ -1,0 +1,11 @@
+body {
+	background: #edf2f7;
+	margin: 2rem;
+}
+
+button {
+	margin-right: 1rem;
+	padding: 0.5rem 1rem;
+	background: #cbd5e0;
+	border-radius: 4px;
+}

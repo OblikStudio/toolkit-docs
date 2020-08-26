@@ -13,7 +13,8 @@ module.exports = {
 		'carousel-watcher': './content/examples/carousel-watcher/script.js',
 		'custom-component': './content/examples/custom-component/script.js',
 		'custom-subcomponent': './content/examples/custom-subcomponent/script.js',
-		'loader-animated': './content/examples/loader-animated/script.js'
+		'loader-animated': './content/examples/loader-animated/script.js',
+		'tippy': './content/examples/tippy/script.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'assets')
