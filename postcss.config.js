@@ -7,6 +7,7 @@ let ancestors = require('postcss-nested-ancestors')
 let autoprefixer = require('autoprefixer')
 
 let purge = require('@fullhuman/postcss-purgecss')({
+	whitelistPatternsChildren: [/tippy/],
 	defaultExtractor: content => {
 		return content.match(/[\w-/:]+(?<!:)/g) || []
 	},
