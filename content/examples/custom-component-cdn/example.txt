@@ -1,0 +1,5 @@
+Title: Custom Component From CDN
+
+----
+
+Inlinescript: true

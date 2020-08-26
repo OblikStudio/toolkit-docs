@@ -20,8 +20,15 @@
 
 <body class="overflow-x-hidden">
 	<?= $page->getMarkup() ?>
-	<?= js('assets/polyfills.js') ?>
-	<?= js($page->getScriptURL()) ?>
+
+	<?php if ($page->inlineScript()->isTrue()) : ?>
+		<script>
+			<?= $page->getScriptText() ?>
+		</script>
+	<?php else : ?>
+		<?= js('assets/polyfills.js') ?>
+		<?= js($page->getScriptURL()) ?>
+	<?php endif ?>
 </body>
 
 </html>
