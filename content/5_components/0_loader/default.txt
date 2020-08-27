@@ -23,7 +23,7 @@ A useful side effect is that thanks to the (link: watcher text: Watcher), all Ob
 
 - `container` holds the main content of the page
 
-**Note:** You can have as containers as you need.
+**Note:** You can have as many containers as you need.
 
 ## Options
 

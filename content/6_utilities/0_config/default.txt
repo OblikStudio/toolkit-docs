@@ -4,7 +4,7 @@ Title: Config
 
 Content:
 
-Specifying component options in HTML attributes with JSON can be tough to read and write. That's why Oblik uses its own single line configuration format to alleviate that. This format is used by the Watcher and the config utility provides a parser for it.
+Specifying component options in HTML attributes with JSON can be tough to read and write. That's why Oblik uses its own single line configuration format to alleviate that. This format is used by the (link: watcher text: Watcher) and the config utility provides a parser for it.
 
 ```js
 import { Parser } from 'oblik/utils/config'

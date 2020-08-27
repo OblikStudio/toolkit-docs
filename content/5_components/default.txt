@@ -99,7 +99,7 @@ Reference to the parent component, if there is one.
 
 **Note:** This is a reference to the parent _component_, not the DOM element. To get the element, use `$parent.$element`.
 
-## Static Properties
+## Static properties
 
 Properties like `$element` are present on component _instances_ (objects created with the `new` keyword). Static properties are part of the component definition itself (the `class` declaration). Read about classes (link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes text: on MDN target: _blank).
 

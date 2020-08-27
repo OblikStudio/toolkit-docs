@@ -4,8 +4,6 @@ Title: Installation
 
 Content:
 
-See how to install and use Oblik Toolkit in your project.
-
 ## With a package manager 
 
 Using (link: https://www.npmjs.com/package/oblik text: npm target: _blank):
