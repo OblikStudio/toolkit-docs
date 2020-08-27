@@ -17,4 +17,10 @@
 			@apply opacity-100;
 		}
 	}
+
+	&--github {
+		&:after {
+			content: '';
+		}
+	}
 }
