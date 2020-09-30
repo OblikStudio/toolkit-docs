@@ -20,12 +20,12 @@
 	</button>
 </nav>
 
-<aside class="b-sidebar fixed z-40 top-0 left-0 h-full px-4 overflow-auto">
+<aside class="b-sidebar fixed z-40 top-0 left-0 h-full p-12 border-r border-gray-200 overflow-auto">
 	<a class="hidden md:block" href="<?= $site->url() ?>">
-		<img class="h-8 mx-auto my-8" src="<?= $site->file('logo.svg')->url() ?>" alt="logo">
+		<img src="<?= $site->file('logo.svg')->url() ?>" alt="logo">
 	</a>
 
-	<ul class="my-4">
+	<ul class="mt-8">
 		<?= snippet('nav-links', ['items' => $pages->listed()]) ?>
 	</ul>
 </aside>

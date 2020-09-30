@@ -1,26 +1,11 @@
 .b-btn {
-	@apply inline-flex text-base text-gray-600 font-bold transition duration-200;
-
-	&:after {
-		@apply text-accent opacity-0;
-		content: '.';
-	}
+	@apply text-base text-gray-600 font-bold transition duration-200;
 
 	&:hover {
-		@apply text-black;
+		@apply text-gray-700;
 	}
 
 	&.is-active {
-		@apply text-black;
-
-		&:after {
-			@apply opacity-100;
-		}
-	}
-
-	&--github {
-		&:after {
-			content: '';
-		}
+		@apply text-gray-900;
 	}
 }
