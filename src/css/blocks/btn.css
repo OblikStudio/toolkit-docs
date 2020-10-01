@@ -1,11 +1,11 @@
 .b-btn {
-	@apply text-base text-gray-600 font-bold transition duration-200;
+	@apply text-base text-gray-600;
 
 	&:hover {
-		@apply text-gray-700;
+		@apply text-accent underline;
 	}
 
 	&.is-active {
-		@apply text-gray-900;
+		@apply text-gray-900 no-underline;
 	}
 }

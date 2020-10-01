@@ -1,37 +1,30 @@
+<?php
+
+$size = $size ?? 'large';
+
+?>
+
 <?php foreach ($items as $item) : ?>
 	<li>
 
 		<?php
-		$isActive = $page === $item;
-		$children = $item->children()->listed();
-		$hasNested = $children->count() > 0;
+		$isActive = $item === $page;
+		$isParentActive = $item === $page->parent();
 
-		if ($isActive) {
-			$headings = $page->content()->content()->markdown()->toHeadings();
-		} else {
-			$headings = null;
-		}
+		$children = $item->children()->listed();
+		$hasChildren = $children->count() > 0;
+		$isChildActive = $children->find($page) !== null;
 		?>
 
-		<a class="b-btn flex py-2 <?= e($isActive, 'is-active') ?>" href="<?= $item->url() ?>">
+		<a class="b-btn flex py-2 <?= r($size === 'large', 'b-sidebar__item text-lg leading-5', 'leading-4') ?> <?= e($isActive || $isChildActive, 'is-active') ?>" href="<?= $item->url() ?>">
 			<?= $item->title() ?>
 		</a>
 
-		<?php if ($headings || $hasNested) : ?>
-			<div class="pl-4 border-l border-gray-400">
-
-				<?php if ($headings) : ?>
-					<ul class="b-nav-headings">
-						<?= snippet('nav-headings', ['items' => $headings]) ?>
-					</ul>
-				<?php endif ?>
-
-				<?php if ($hasNested) : ?>
-					<ul>
-						<?= snippet('nav-links', ['items' => $children]) ?>
-					</ul>
-				<?php endif ?>
-
+		<?php if ($hasChildren && ($isActive || $isParentActive)) : ?>
+			<div class="my-2 pl-3 border-l-2 border-gray-200">
+				<ul class="inline-block -my-2">
+					<?= snippet('nav-links', ['items' => $children, 'size' => 'small']) ?>
+				</ul>
 			</div>
 		<?php endif ?>
 
