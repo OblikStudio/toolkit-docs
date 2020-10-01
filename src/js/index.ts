@@ -6,12 +6,14 @@ import { Watcher } from 'oblik'
 import scrolled from 'oblik/components/scrolled'
 import scrollto from 'oblik/components/scroll-to'
 import toggle from 'oblik/components/toggle'
+import scrollnav from './modules/scroll-nav'
 import tabs from './modules/tabs'
 
 let w = new Watcher(document.body, {
 	components: {
 		scrolled,
 		toggle,
+		scrollnav,
 		tabs
 	}
 })

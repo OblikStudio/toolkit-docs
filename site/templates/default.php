@@ -32,7 +32,7 @@
 
 <div class="b-sidebar__pad fixed z-30 top-0 left-0 w-full h-full"></div>
 
-<main class="b-content my-24">
+<main class="b-content relative my-24">
 	<div class="s-content mx-auto">
 		<h1>
 			<?= $page->title() ?>
@@ -68,6 +68,18 @@
 			</a>
 		<?php endif ?>
 	</div>
+
+	<?php
+	$headings = $page->content()->content()->markdown()->toHeadings();
+	?>
+
+	<?php if ($headings && count($headings) > 1 && count($headings) < 16) : ?>
+		<div class="absolute hidden md:block top-0 left-100 h-full" ob-scrollnav>
+			<ul class="b-nav-headings fixed -my-2 pt-16 pl-16">
+				<?= snippet('nav-headings', ['items' => $headings]) ?>
+			</ul>
+		</div>
+	<?php endif ?>
 </main>
 
 <?= snippet('document/close') ?>
