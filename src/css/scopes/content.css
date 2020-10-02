@@ -61,14 +61,21 @@
 	}
 
 	a {
-		@apply text-accent;
+		@apply underline;
 
 		&:hover {
-			@apply underline;
+			@apply text-accent;
 		}
 
-		&[target="_blank"] {
-			color: #f71a1a;
+		&[target="_blank"]:after {
+			@apply text-accent;
+			content: "";
+			display: inline-block;
+			width: 0.875em;
+			height: 0.875em;
+			margin-bottom: -0.125em;
+			margin-left: 0.1875em;
+			background: url("../images/external-link-alt-solid.svg") no-repeat;
 		}
 	}
 
