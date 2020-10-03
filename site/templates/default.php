@@ -32,7 +32,7 @@
 
 <div class="b-sidebar__pad fixed z-30 top-0 left-0 w-full h-full"></div>
 
-<main class="b-content relative my-24">
+<main class="b-content relative my-24 md:mb-40">
 	<div class="s-content mx-auto">
 		<h1>
 			<?= $page->title() ?>
@@ -42,30 +42,6 @@
 			<?= $page->content()->content()->markdown()->clean()->kirbytags()->headings(function ($heading) {
 				return snippet('heading', ['item' => $heading], true);
 			}) ?>
-		<?php endif ?>
-	</div>
-
-	<hr class="my-12 border-t-2 border-gray-200">
-
-	<div class="flex -my-4 text-lg md:text-xl">
-		<?php
-		$all = $site->index()->listed();
-		$index = $all->indexOf($page);
-
-		$prev = $all->nth($index - 1);
-		$next = $all->nth($index + 1);
-		?>
-
-		<?php if ($prev) : ?>
-			<a class="b-anchor py-4 font-bold text-accent" href="<?= $prev->url() ?>">
-				&larr; <?= $prev->title() ?>
-			</a>
-		<?php endif ?>
-
-		<?php if ($next) : ?>
-			<a class="b-anchor ml-auto py-4 font-bold text-accent" href="<?= $next->url() ?>">
-				<?= $next->title() ?> &rarr;
-			</a>
 		<?php endif ?>
 	</div>
 
@@ -81,5 +57,29 @@
 		</div>
 	<?php endif ?>
 </main>
+
+<div class="md:fixed z-30 bottom-0 left-0 w-full px-4 md:px-0 bg-white border-t border-gray-200">
+	<div class="flex justify-between w-full max-w-content h-16 mx-auto text-lg md:text-xl">
+		<?php
+		$all = $site->index()->listed();
+		$index = $all->indexOf($page);
+
+		$prev = $all->nth($index - 1);
+		$next = $all->nth($index + 1);
+		?>
+
+		<?php if ($prev) : ?>
+			<a class="b-anchor inline-flex items-center font-bold text-accent" href="<?= $prev->url() ?>">
+				&larr; <?= $prev->title() ?>
+			</a>
+		<?php endif ?>
+
+		<?php if ($next) : ?>
+			<a class="b-anchor inline-flex items-center font-bold text-accent" href="<?= $next->url() ?>">
+				<?= $next->title() ?> &rarr;
+			</a>
+		<?php endif ?>
+	</div>
+</div>
 
 <?= snippet('document/close') ?>
