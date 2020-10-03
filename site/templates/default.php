@@ -59,7 +59,7 @@
 </main>
 
 <div class="md:fixed z-30 bottom-0 left-0 w-full px-4 md:px-0 bg-white border-t border-gray-200">
-	<div class="flex justify-between w-full max-w-content h-16 mx-auto text-lg md:text-xl">
+	<div class="flex w-full max-w-content h-16 mx-auto text-lg md:text-xl">
 		<?php
 		$all = $site->index()->listed();
 		$index = $all->indexOf($page);
@@ -75,7 +75,7 @@
 		<?php endif ?>
 
 		<?php if ($next) : ?>
-			<a class="b-anchor inline-flex items-center font-bold text-accent" href="<?= $next->url() ?>">
+			<a class="b-anchor inline-flex items-center ml-auto font-bold text-accent" href="<?= $next->url() ?>">
 				<?= $next->title() ?> &rarr;
 			</a>
 		<?php endif ?>
