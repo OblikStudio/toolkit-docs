@@ -11,4 +11,4 @@
 	<?= css('assets/main.css') ?>
 </head>
 
-<body>
+<body <?= e($page->isHomePage(), 'class="is-at-intro"') ?>>

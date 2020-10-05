@@ -8,6 +8,10 @@
 	@screen md {
 		padding-top: 0;
 		box-shadow: none;
+
+		body.is-at-intro & {
+			transform: translateX(-100%);
+		}
 	}
 
 	@media (max-width: theme("screens.md")) {

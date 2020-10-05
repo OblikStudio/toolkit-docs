@@ -1,0 +1,7 @@
+.b-bottom-nav {
+	@apply transition duration-300 ease-out;
+
+	body.is-at-intro & {
+		transform: translateY(100%);
+	}
+}

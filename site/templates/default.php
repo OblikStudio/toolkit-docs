@@ -1,5 +1,9 @@
 <?= snippet('document/open') ?>
 
+<?php if (page()->isHomePage()) : ?>
+	<?= snippet('intro') ?>
+<?php endif ?>
+
 <nav class="b-navbar fixed z-50 top-0 left-0 flex md:hidden justify-between w-full px-4 bg-white is-scrolled-up" ob-scrolled>
 	<a class="flex items-center md:hidden" href="<?= $site->url() ?>">
 		<img class="h-6" src="<?= $site->file('logo.svg')->url() ?>" alt="logo">
@@ -32,7 +36,7 @@
 
 <div class="b-sidebar__pad fixed z-30 top-0 left-0 w-full h-full"></div>
 
-<main class="b-content relative my-24 md:mb-40">
+<main id="content" class="b-content relative my-24 md:mb-40">
 	<div class="s-content mx-auto">
 		<h1>
 			<?= $page->title() ?>
@@ -58,7 +62,7 @@
 	<?php endif ?>
 </main>
 
-<div class="md:fixed z-30 bottom-0 left-0 w-full px-4 md:px-0 bg-white border-t border-gray-200">
+<div class="b-bottom-nav md:fixed z-30 bottom-0 left-0 w-full px-4 md:px-0 bg-white border-t border-gray-200">
 	<div class="flex w-full max-w-content h-16 mx-auto text-lg md:text-xl">
 		<?php
 		$all = $site->index()->listed();
