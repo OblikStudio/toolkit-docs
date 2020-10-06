@@ -7,3 +7,10 @@ Heading: Collection of minimal and extensible JavaScript components and utilitie
 ----
 
 Headline: What it does focus on is just interactive behaviors. Things like parallax and scroll effects, sliders, etc.
+
+----
+
+Headerbottom:
+
+Feedback and ideas:
+(email: toolkit@oblik.studio)
