@@ -13,4 +13,8 @@ Headline: What it does focus on is just interactive behaviors. Things like paral
 Headerbottom:
 
 Feedback and ideas:
-(email: toolkit@oblik.studio)
+(email: hello+toolkit@oblik.studio)
+
+----
+
+Version: Version <br class="hidden md:block"> 1.1.1

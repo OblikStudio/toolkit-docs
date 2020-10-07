@@ -1,6 +1,8 @@
-<header class="b-intro flex flex-col justify-between w-full h-screen p-12 bg-black bg-center bg-no-repeat" style="background-image: url(<?= $site->file('visual.jpg')->url() ?>);" ob-intro>
+<header class="b-intro flex flex-col justify-between w-full h-screen p-4 md:p-12 bg-black bg-center bg-no-repeat" style="background-image: url(<?= $site->file('visual.jpg')->url() ?>);" ob-intro>
 
-	<div class="relative">
+	<div class="h-10 md:hidden"></div>
+
+	<div class="relative hidden md:block">
 		<div class="absolute top-0 left-0">
 			<img src="<?= $site->file('logo-light.svg')->url() ?>" alt="Oblik Toolkit white logo text">
 		</div>
@@ -18,27 +20,27 @@
 	</div>
 
 	<div class="w-full max-w-content mx-auto">
-		<h1 class="text-5xl leading-tight text-white"><?= $site->heading() ?></h1>
-		<p class="mt-6 text-2xl leading-snug text-white text-opacity-75"><?= $site->headline() ?></p>
-		<div class="mt-12">
-			<a class="b-anchor inline-block px-8 py-4 text-lg font-bold bg-white text-gray-900" href="#content">Get Started</a>
-			<a class="b-anchor inline-block px-8 py-4 text-lg font-bold text-white" href="#content">GitHub</a>
+		<h1 class="text-3xl md:text-5xl leading-tight text-white"><?= $site->heading() ?></h1>
+		<p class="mt-4 md:mt-6 text-xl md:text-2xl leading-snug text-white text-opacity-75"><?= $site->headline() ?></p>
+		<div class="flex mt-8 md:mt-12">
+			<a class="b-anchor inline-block w-full md:w-auto px-8 py-4 text-lg font-bold text-center bg-white text-gray-900" href="#content">Get Started</a>
+			<a class="b-anchor hidden md:inline-block px-8 py-4 text-lg font-bold text-white" href="#content">GitHub</a>
 		</div>
 	</div>
 
-	<div class="relative text-sm font-bold text-white">
-		<div class="absolute top-0 left-0">
+	<div class="relative flex flex-wrap mb-4 md:mb-0 text-sm font-bold text-white">
+		<div class="hidden md:block absolute top-0 left-0 w-1/2 md:w-auto">
 			<a class="b-anchor block" href="https://github.com/oblikjs" target="_blank" rel="nofollow">GitHub</a>
 			<a class="b-anchor block" href="https://twitter.com/oblikweare" target="_blank" rel="nofollow">Twitter</a>
 		</div>
 
-		<div class="w-full max-w-content mx-auto">
+		<div class="hidden md:block w-full max-w-content mx-auto">
 			<p class="s-links"><?= $site->headerBottom()->kti() ?></p>
 		</div>
 
-		<div class="absolute top-0 right-0">
-			<div class="flex text-right">
-				<p class="mr-12">Version<br>1.1.1</p>
+		<div class="md:absolute top-0 right-0 mx-auto">
+			<div class="flex flex-col md:flex-row items-center text-center md:text-right">
+				<p class="mb-2 md:mb-0 md:mr-12 md:max-w-xs"><?= $site->version() ?></p>
 				<a class="b-anchor" href="#content">
 					<svg width="3em" height="3em" viewBox="0 0 48 48">
 						<circle cx="24" cy="24" r="23" fill="black" stroke="white" stroke-width="2" />
