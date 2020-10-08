@@ -74,8 +74,8 @@
 	<?php endif ?>
 </main>
 
-<div class="b-bottom-nav md:fixed z-30 bottom-0 left-0 w-full px-4 md:px-0 bg-white border-t border-gray-200">
-	<div class="flex w-full max-w-content h-16 mx-auto text-lg md:text-xl">
+<div class="b-bottom-nav md:fixed z-30 bottom-0 left-0 w-full bg-white border-t border-gray-200">
+	<div class="b-content flex h-16 text-lg md:text-xl">
 		<?php
 		$all = $site->index()->listed();
 		$index = $all->indexOf($page);
