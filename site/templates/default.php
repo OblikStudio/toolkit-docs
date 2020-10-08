@@ -33,16 +33,16 @@
 				<hr class="my-8">
 
 				<ul>
-					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://oblik.studio" target="_blank" rel="nofollow">Oblik Studio</a></li>
-					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://github.com/oblikjs" target="_blank" rel="nofollow">GitHub</a></li>
-					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://twitter.com/oblikweare" target="_blank" rel="nofollow">Twitter</a></li>
+					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="<?= $site->linkAuthor() ?>" target="_blank">Oblik Studio</a></li>
+					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="<?= $site->linkGitHub() ?>" target="_blank" rel="nofollow">GitHub</a></li>
+					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="<?= $site->linkTwitter() ?>" target="_blank" rel="nofollow">Twitter</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
 	<div class="hidden md:block text-center border-t border-gray-200">
-		<a class="inline-flex items-center h-16 text-lg font-bold" href="https://github.com/oblikjs/oblik" target="_blank" rel="nofollow">GitHub</a>
+		<a class="inline-flex items-center h-16 text-lg font-bold" href="<?= $site->linkGitHub() ?>" target="_blank" rel="nofollow">GitHub</a>
 	</div>
 </nav>
 

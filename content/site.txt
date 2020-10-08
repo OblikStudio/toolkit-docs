@@ -18,3 +18,27 @@ Feedback and ideas:
 ----
 
 Version: Version <br class="hidden md:block"> 1.1.1
+
+----
+
+Linkintro: #content
+
+----
+
+Linkgithub: https://github.com/oblikjs/oblik
+
+----
+
+Linkissues: https://github.com/oblikjs/oblik/issues
+
+----
+
+Linkpackage: https://www.npmjs.com/package/oblik
+
+----
+
+Linkauthor: https://oblik.studio
+
+----
+
+Linktwitter: https://twitter.com/oblikweare
