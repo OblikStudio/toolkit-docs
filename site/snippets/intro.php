@@ -3,8 +3,8 @@
 	<div class="h-10 md:hidden"></div>
 
 	<div class="relative hidden md:block">
-		<div class="absolute top-0 left-0">
-			<img src="<?= $site->file('logo-light.svg')->url() ?>" alt="Oblik Toolkit white logo text">
+		<div class="absolute top-0 left-0 text-white">
+			<?= svg($site->file('logo.svg')) ?>
 		</div>
 
 		<div class="grid grid-flow-col justify-start gap-8 w-full max-w-content mx-auto text-white">

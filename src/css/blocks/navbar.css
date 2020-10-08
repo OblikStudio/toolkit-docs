@@ -9,9 +9,17 @@
 		transform: translateY(-100%);
 	}
 
+	body.is-at-intro:not(.is-active-nav) & {
+		@apply bg-black text-white;
+	}
+
 	body.is-active-nav & {
 		@apply shadow-md;
 		transform: none;
+	}
+
+	&__logo svg {
+		@apply w-auto h-8;
 	}
 
 	&__toggle {
