@@ -20,22 +20,24 @@
 
 <nav class="b-sidebar fixed z-40 top-0 left-0 flex flex-col justify-between h-full border-r border-gray-200 overflow-auto">
 	<div class="p-12">
-		<a class="hidden md:block text-gray-900" href="<?= $site->url() ?>">
+		<a class="hidden md:block mb-8 text-gray-900" href="<?= $site->url() ?>">
 			<?= svg($site->file('logo.svg')) ?>
 		</a>
 
-		<ul class="inline-block md:mt-8">
-			<?= snippet('nav-links', ['items' => $pages->listed()]) ?>
-		</ul>
-
-		<div class="md:hidden">
-			<hr class="my-8">
-
-			<ul>
-				<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://oblik.studio" target="_blank" rel="nofollow">Oblik Studio</a></li>
-				<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://github.com/oblikjs" target="_blank" rel="nofollow">GitHub</a></li>
-				<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://twitter.com/oblikweare" target="_blank" rel="nofollow">Twitter</a></li>
+		<div class="-my-2">
+			<ul class="inline-block">
+				<?= snippet('nav-links', ['items' => $pages->listed()]) ?>
 			</ul>
+
+			<div class="md:hidden">
+				<hr class="my-8">
+
+				<ul>
+					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://oblik.studio" target="_blank" rel="nofollow">Oblik Studio</a></li>
+					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://github.com/oblikjs" target="_blank" rel="nofollow">GitHub</a></li>
+					<li><a class="b-btn inline-flex py-2 text-lg leading-5" href="https://twitter.com/oblikweare" target="_blank" rel="nofollow">Twitter</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
