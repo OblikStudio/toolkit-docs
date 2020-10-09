@@ -1,7 +1,9 @@
 <?= snippet('document/open') ?>
 
 <?php if (page()->isHomePage()) : ?>
-	<?= snippet('intro') ?>
+	<div style="height: 140vh">
+		<?= snippet('intro') ?>
+	</div>
 <?php endif ?>
 
 <nav class="b-navbar fixed z-50 top-0 left-0 flex md:hidden justify-between w-full px-4 text-gray-900 bg-white is-scrolled-up" ob-scrolled>

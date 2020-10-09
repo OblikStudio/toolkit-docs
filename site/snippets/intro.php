@@ -1,4 +1,14 @@
-<header class="b-intro flex flex-col justify-between w-full h-screen py-4 md:py-12 bg-black bg-center bg-no-repeat" style="background-image: url(<?= $site->file('visual.jpg')->url() ?>);" ob-intro>
+<?php
+$visuals = page('intro')->files();
+$data = [
+	'$rail' => '@parent',
+	'frames' => $visuals->pluck('url')
+];
+?>
+
+<header class="sticky top-0 flex flex-col justify-between w-full h-screen py-4 md:py-12 bg-black bg-center bg-no-repeat" ob-intro='<?= json_encode($data) ?>'>
+
+	<canvas class="absolute top-0 left-0 w-full h-full bg-center bg-contain" style="background-image: url(<?= $visuals->first()->url() ?>);"></canvas>
 
 	<div class="h-10 md:hidden"></div>
 
@@ -19,7 +29,7 @@
 		</div>
 	</div>
 
-	<div class="b-content">
+	<div class="b-content relative">
 		<h1 class="text-3xl md:text-5xl leading-tight text-white"><?= $site->heading() ?></h1>
 		<p class="mt-4 md:mt-6 text-xl md:text-2xl leading-snug text-white text-opacity-75"><?= $site->headline() ?></p>
 		<div class="flex mt-8 md:mt-12">
