@@ -44,7 +44,10 @@ export class Intro extends Component<HTMLElement, Options> {
 		this.frame = Math.round(progress * (this.$options.frames.length - 1))
 		this.draw()
 
-		if (box.bottom >= 0) {
+		let isScrolledPast = box.bottom < 0
+		let isScrollable = window.innerHeight + document.scrollingElement.scrollTop < document.scrollingElement.scrollHeight
+
+		if (!isScrolledPast && isScrollable) {
 			document.body.classList.add('is-at-intro')
 		} else {
 			document.body.classList.remove('is-at-intro')
