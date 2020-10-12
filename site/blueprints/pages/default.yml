@@ -1,6 +1,17 @@
 title: Page
-preset: page
 
-fields:
+tabs:
   content:
-    type: textarea
+    preset: page
+    fields:
+      content:
+        type: textarea
+  meta:
+    preset: page
+    fields:
+      meta:
+        type: entity
+        extends: fields/meta
+      metaInherit:
+        type: entity
+        extends: fields/meta

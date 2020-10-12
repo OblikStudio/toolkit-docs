@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcbc5684580d9d6ab3678d9429c65939",
+    "content-hash": "5d30104fe67166ddecd12ca1d429fa10",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -457,6 +457,41 @@
                 "yml"
             ],
             "time": "2019-09-10T13:16:29+00:00"
+        },
+        {
+            "name": "oblik/kirby-entity-field",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OblikStudio/kirby-entity-field.git",
+                "reference": "aaf9f10efb32d523115901e69ead57bfe9be1ee0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OblikStudio/kirby-entity-field/zipball/aaf9f10efb32d523115901e69ead57bfe9be1ee0",
+                "reference": "aaf9f10efb32d523115901e69ead57bfe9be1ee0",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^3.3",
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "entity-field"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hristiyan Dodov",
+                    "email": "h.dodov@gmail.com"
+                }
+            ],
+            "description": "Kirby field that acts as a one-entry structure.",
+            "time": "2020-04-23T08:14:29+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

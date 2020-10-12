@@ -4,5 +4,7 @@
 /node_modules
 /public
 /site/accounts
+/site/plugins/*
+!/site/plugins/project
 /site/sessions
 /vendor

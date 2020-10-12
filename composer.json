@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "getkirby/cms": "^3.4"
+        "getkirby/cms": "^3.4",
+        "oblik/kirby-entity-field": "^1.0"
     }
 }
