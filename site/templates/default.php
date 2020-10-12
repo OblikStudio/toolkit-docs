@@ -1,7 +1,7 @@
 <?= snippet('document/open') ?>
 
 <?php if (page()->isHomePage()) : ?>
-	<div style="height: 140vh">
+	<div class="b-intro">
 		<?= snippet('intro') ?>
 	</div>
 <?php endif ?>

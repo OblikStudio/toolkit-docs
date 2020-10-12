@@ -1,0 +1,8 @@
+.b-intro {
+	height: 160vh;
+	margin-bottom: -100px;
+
+	&__content {
+		transform: translateY(calc(var(--intro-anim) * -100px));
+	}
+}
