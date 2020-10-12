@@ -2,11 +2,11 @@ Title: Oblik Toolkit
 
 ----
 
-Heading: Collection of minimal and extensible JavaScript components and utilities
+Heading: Collection of minimal and extensible front-end components and utilities
 
 ----
 
-Headline: What it does focus on is just interactive behaviors. Things like parallax and scroll effects, sliders, etc.
+Headline: Easily implement interactive JavaScript effects in your next project without opinionated CSS styling and bloat
 
 ----
 

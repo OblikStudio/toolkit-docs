@@ -1,1 +1,17 @@
 Title: Examples
+
+----
+
+Content: 
+
+----
+
+Meta:
+
+index: 'false'
+
+----
+
+Metainherit:
+
+index: 'false'

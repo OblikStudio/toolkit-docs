@@ -2,6 +2,10 @@ Title: Utilities
 
 ----
 
-Content:
+Content: Oblik gives you UI components, but they might not be what you're looking for. That's why the main goal of Oblik is to be modular - if the whole thing is not useful, perhaps a part of it is.
 
-Oblik gives you UI components, but they might not be what you're looking for. That's why the main goal of Oblik is to be modular - if the whole thing is not useful, perhaps a part of it is.
+----
+
+Metainherit:
+
+title: '{{ page.title }} Utility &bull; {{ site.title }}'

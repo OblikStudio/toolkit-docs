@@ -184,3 +184,9 @@ class MyComponent extends Component {
 ```
 
 The `$foo` array will be updated accordingly when child components are added/removed.
+
+----
+
+Metainherit:
+
+title: '{{ page.title }} Component &bull; {{ site.title }}'

@@ -27,3 +27,9 @@ Instead of providing do-it-all solutions, the target of Oblik is to give you (li
 - can be configured through (link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain text: inheritance target: _blank)
 
 Oblik is meant to be used as a dependency in your project where you import just the things you need. However, you could also use it straight from a CDN.
+
+----
+
+Meta:
+
+title: '{{ site.title }} &bull; Front-End Components and Utilities'
