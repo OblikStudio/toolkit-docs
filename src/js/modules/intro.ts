@@ -1,5 +1,5 @@
 import { Component } from "oblik";
-import { easeInQuint } from "oblik/utils/easings";
+import { easeInCubic } from "oblik/utils/easings";
 
 interface Options {
 	rail: HTMLElement
@@ -53,7 +53,7 @@ export class Intro extends Component<HTMLElement, Options> {
 			document.body.classList.remove('is-at-intro')
 		}
 
-		document.body.style.setProperty('--intro-anim', easeInQuint(progress).toString())
+		document.body.style.setProperty('--intro-anim', easeInCubic(progress).toString())
 	}
 
 	size () {
