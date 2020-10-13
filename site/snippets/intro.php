@@ -8,7 +8,7 @@ $data = [
 
 <header class="b-intro__content sticky top-0 flex flex-col justify-between w-full h-screen py-4 md:py-12 bg-black bg-center bg-no-repeat" ob-intro='<?= json_encode($data) ?>'>
 
-	<canvas class="absolute top-0 left-0 w-full h-full bg-center bg-contain" style="background-image: url(<?= $visuals->first()->url() ?>);"></canvas>
+	<canvas class="absolute top-0 left-0 w-full h-full bg-center bg-contain bg-no-repeat" style="background-image: url(<?= $visuals->first()->url() ?>);"></canvas>
 
 	<div class="h-10 md:hidden"></div>
 
