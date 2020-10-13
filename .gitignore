@@ -1,4 +1,5 @@
-/assets
+/assets/*
+!/assets/favicons
 /kirby
 /media
 /node_modules
