@@ -55,7 +55,7 @@ Fired whenever a new swipe starts, which means `mousedown` and `touchstart`.
 
 ### `move (event: GestureEvent)`
 
-Fried whenever a swipe is updated, which means `mousemove` and `touchmove`.
+Fired whenever a swipe is updated, which means `mousemove` and `touchmove`.
 
 ### `up (event: GestureEvent)`
 
