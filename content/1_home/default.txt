@@ -4,11 +4,11 @@ Title: Introduction
 
 Content:
 
-Oblik Toolkit is a collection of minimal and extensible JavaScript components and utilities, created and maintained by (link: https://oblik.studio/ text: Oblik Studio target: _blank). It's not focused on reactivity like Vue or React. It's also not a framework with predesigned components like Bootstrap. What it _does_ focus on is just interactive behaviors. Things like parallax and scroll effects, sliders, etc.
+Oblik Toolkit is a collection of minimal and extensible JavaScript components and utilities, created and maintained by (link: https://oblik.studio/ text: Oblik Studio target: _blank). It's not focused on reactivity like Vue or React. It's also not a framework with predesigned components like Bootstrap. What it _does_ focus on are just interactive behaviors. Things like parallax and scroll effects, sliders, etc.
 
 The toolkit can be compared to (link: https://getuikit.com/ text: UIKit target: _blank), from which it has drawn a lot of inspiration. The main difference is that Oblik focuses solely on the JavaScript parts and depends on CSS as little as possible, leaving styling in your hands.
 
-Main goals of the project are:
+The main goals of the project are:
 
 1. Giving you components with logic for interactive behaviors
 2. Allowing you to easily extend those components or create your own
@@ -17,7 +17,7 @@ Main goals of the project are:
 ## Architecture
 
 - Components are expressed as ES6 classes in ES6 modules
-- TypeScript is used to provide stability and enhance developer experience
+- TypeScript is used to provide stability and enhance the developer experience
 - Code is compiled down to ES5 to support browsers up to IE11
 
 Instead of providing do-it-all solutions, the target of Oblik is to give you (link: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS text: object-oriented target: _blank) components that:
