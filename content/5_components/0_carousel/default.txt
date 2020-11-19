@@ -6,10 +6,10 @@ Content:
 
 - Has touch support
 - Sliding can be animated with CSS transitions
-- Active slide is changed based on swipe speed, rather than distance
+- The active slide is changed based on swipe speed, rather than distance
 - Pure CSS option for infinite sliding (via CSS flex order)
-- Gap between items is controlled with CSS
-- Items per row is controlled with CSS and works responsively
+- The gap between items is controlled with CSS
+- Items per row are controlled with CSS and work responsively
 
 (example: carousel-watcher active: result)
 
@@ -36,7 +36,7 @@ Although you can control items per screen via CSS, you can explicitly specify it
 
 ### `overdrag`
 
-Ratio for how far the user can drag beyond the first/last item. If the carousel width is `400px` and `overdrag` is `0.5`, then the distance will be `200px`.
+The ratio for how far the user can drag beyond the first/last item. If the carousel width is `400px` and `overdrag` is `0.5`, then the distance will be `200px`.
 
 **Default:** `0.3`
 

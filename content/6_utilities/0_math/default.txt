@@ -26,7 +26,7 @@ Add either numbers or a Vector.
 
 #### `subtract(input: Point): this`
 
-Subctract another Point object.
+Subtract another Point object.
 
 #### `to(input: Point): Vector`
 

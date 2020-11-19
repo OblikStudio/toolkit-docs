@@ -4,7 +4,7 @@ Title: Gesture
 
 Content:
 
-Allows you to handle mouse and touch events together and provides you useful data like movement delta and the pointer speed in pixels per second. You can use this to create your own mouse or touch based logic the same way it's used in the (link: components/carousel text: Carousel) component for changing slides.
+Allows you to handle mouse and touch events together and provides you useful data like movement delta and the pointer speed in pixels per second. You can use this to create your own mouse or touch-based logic the same way it's used in the (link: components/carousel text: Carousel) component for changing slides.
 
 ```js
 import { Gesture } from 'oblik/utils'
