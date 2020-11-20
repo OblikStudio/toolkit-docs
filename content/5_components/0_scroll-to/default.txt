@@ -24,13 +24,13 @@ An (link: utilities/easings text: easing) function.
 
 ### `target`
 
-Element that should be scrolled into view.
+The element that should be scrolled into view.
 
 **Default:** `undefined`
 
 ### `offset`
 
-If `target` is specified, `offset` will simply be added to the target element's position. Otherwise, it will scroll to `offset` pixels past the document top.
+If the `target` is specified, `offset` will simply be added to the target element's position. Otherwise, it will scroll to `offset` pixels past the document top.
 
 **Default:** `0`
 

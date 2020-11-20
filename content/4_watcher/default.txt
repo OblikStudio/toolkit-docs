@@ -4,7 +4,7 @@ Title: Watcher
 
 Content:
 
-Unless you're using a library like Vue or React, separating JavaScript functionality in components can be hard to do and maintain. You can split your code in multiple modules or classes, but you still have to initialize it with actual DOM elements and clean it up later.
+Unless you're using a library like Vue or React, separating JavaScript functionality in components can be hard to do and maintain. You can split your code into multiple modules or classes, but you still have to initialize it with actual DOM elements and clean it up later.
 
 In Oblik, components are simply ES6 classes and the Watcher is a tool that initializes and destroys them automatically as they're added/removed from the DOM. It does that with the help of a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver target: _blank).
 

@@ -19,7 +19,7 @@ let animation = new ScrollAnimation({
 animation.run()
 ```
 
-You can also use the `scrollTo()` export as well:
+You can use the `scrollTo()` export as well:
 
 ```js
 import { scrollTo } from 'oblik/utils/scroll'
@@ -48,7 +48,7 @@ An (link: utilities/easings text: easing) function.
 
 ### `target`
 
-Element that should be scrolled into view.
+The element that should be scrolled into view.
 
 **Default:** `undefined`
 

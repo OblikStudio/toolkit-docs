@@ -10,11 +10,11 @@ The most direct way to use a component is to simply import it and attach it to a
 
 (example: carousel active: js)
 
-This gives you low level access to the lifecycle of components, allowing you to adapt them to other frameworks and libraries.
+This gives you low-level access to the lifecycle of components, allowing you to adapt them to other frameworks and libraries.
 
 ## The Watcher
 
-Having to manually query the needed DOM elements and intialize your components can become annoying and tough to deal with. That's where the (link: watcher text: Watcher) helps. It binds a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver target: _blank) to an element (like the `<body>`), then automatically creates and destroys components you've registered:
+Having to manually query the needed DOM elements and initialize your components can become annoying and tough to deal with. That's where the (link: watcher text: Watcher) helps. It binds a (link: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver text: MutationObserver target: _blank) to an element (like the `<body>`), then automatically creates and destroys components you've registered:
 
 (example: carousel-watcher active: js)
 
